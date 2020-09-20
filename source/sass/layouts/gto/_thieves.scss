@@ -1,0 +1,92 @@
+.gto-thieves {
+  margin-top: 30px;
+  
+  &-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -10px;
+
+    @include media('<large') {
+      flex-direction: column;
+    }
+  }
+
+  &-item {
+    width: 50%;
+    padding: 0 10px;
+
+    @include media('<large') {
+      width: 100%;
+      padding: 25px 0;
+    }
+  }
+
+  &-name {
+    font-family: 'Gotham Pro';
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  &-info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+
+    @include media('<large') {
+      flex-direction: column;
+    }
+  }
+
+  &-photo {
+    margin-right: 20px;
+    width: 190px;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    &-element {
+      width: 100%;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-description {
+    font-family: 'Gotham Pro';
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    max-width: 300px;
+    opacity: 0.7;
+
+    @include media('<large') {
+      margin: 30px 0;
+    }
+  }
+
+  &-pdf {
+    & > a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-family: 'Gotham Pro';
+      font-size: 14px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      & > span {
+        margin: 0 10px;
+        text-decoration: underline;
+      }
+    }
+  }
+}

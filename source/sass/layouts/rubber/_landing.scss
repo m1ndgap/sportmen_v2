@@ -1,0 +1,13 @@
+.rubber-landing {
+  &-main {
+    background-image: url('../images/rubber/background-lg.jpg');
+
+    @include media('>=small', '<large') {
+      background-image: url('../images/rubber/background-md.jpg');
+    }
+  
+    @include media('<small') {
+      background-image: url('../images/rubber/background-sm.jpg');
+    }
+  }
+}

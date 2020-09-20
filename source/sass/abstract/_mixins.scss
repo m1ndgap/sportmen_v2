@@ -1,0 +1,35 @@
+@mixin first-level-title($color) {
+  margin: 0;
+  font-family: 'Gotham Pro';
+  font-size: 48px;
+  color: $color;
+  line-height: 1.125;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  @include media('<large') {
+    font-size: 40px;
+  }
+
+  @include media('<small') {
+    font-size: 28px;
+  }
+}
+
+@mixin second-level-title($color) {
+  margin: 0;
+  font-family: 'Gotham Pro';
+  font-size: 40px;
+  color: $color;
+  line-height: 1.125;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  @include media('>=small', '<large') {
+    font-size: 30px;
+  }
+
+  @include media('<small') {
+    font-size: 24px;
+  }
+}

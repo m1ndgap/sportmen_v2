@@ -1,0 +1,86 @@
+$slick-dot-color: #f7cf2d
+$slick-dot-size: 10px
+
+.pc-pic-slider
+  width: 612px
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  @include media('<large')
+    width: 354px
+  @include media('<small')
+    display: none
+    width: 90%
+    margin: auto
+    margin-top: 20px
+    padding-bottom: 35px
+
+.pc-pic-slider-mobile
+  display: none
+  @include media('<small')
+    margin-top: 15px
+    display: block
+    width: 100%
+    margin: auto
+    img
+      width: 100%
+    .slick-dots
+      bottom: -30px
+      li
+        button
+          &::before
+            font-size: 15px
+      .slick-active
+        button
+          &::before
+            color: $lyellow
+
+.pc-pic-slider-main-pic
+  position: relative
+  img
+    width: 100%
+
+.pc-pic-magnify
+  position: absolute
+  height: 55px
+  width: 55px
+  background-color: #fff
+  background-image: url('../images/magnifying_glass.svg')
+  background-size: 30px
+  background-repeat: no-repeat
+  background-position: center
+  cursor: pointer
+  @include media('<small')
+    display: none
+
+.pc-pic-slider-pic
+  width: 190px
+  margin-top: 20px
+  max-height: 127px
+  overflow: hidden
+  cursor: pointer
+  @include media('<large')
+    width: 104px
+  @include media('<small')
+    display: none
+  img
+    vertical-align: middle
+    width: 100%
+
+.pc-pic-mobile-buttons
+  display: none
+  @include media('<small')
+    display: flex
+    flex-flow: row nowrap
+    cursor: pointer
+    justify-content: space-between
+    width: 76px
+    margin: auto
+    margin-top: 10px
+    div
+      width: 12px
+      height: 12px
+      background-color: $grey
+      border-radius: 50%
+    .active
+      background-color: $lyellow

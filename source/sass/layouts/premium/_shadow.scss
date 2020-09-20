@@ -1,0 +1,29 @@
+.premium-shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 120px;
+
+  @include media('<small') {
+    display: none;
+  }
+
+  @include media('>=small', '<large') {
+    padding-top: 70px;
+  }
+
+  &-text {
+    font-family: 'Gotham Pro';
+    font-size: 150px;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.04);
+    text-transform: uppercase;
+
+    @include media('<large') {
+      font-size: 70px;
+    }
+  }
+}

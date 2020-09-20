@@ -1,0 +1,10 @@
+.common-container {
+  position: relative;
+  width: 1240px;
+  margin: 0 auto;
+
+  @include media('<large') {
+    width: 100%;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,174 @@
+.clamps-table {
+  width: 100%;
+  font-family: 'Gotham Pro';
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  border-collapse: collapse;
+
+  @include media('<large') {
+    display: none;
+  }
+
+  &-sm {
+    display: none;
+
+    @include media('<large') {
+      display: block;
+    }
+  }
+
+  &-title {
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    margin: 60px 0;
+
+    @include media('>=small', '<large') {
+      margin: 50px 0;
+    }
+  }
+
+  & thead {
+    border-bottom: 10px solid #000;
+
+    & > tr {
+      & > td {
+        padding: 10px 15px 15px;
+        vertical-align: bottom;
+
+        &.active {
+          background-color: #f7cf2d;
+        }
+
+        & > div {
+          font-weight: bold;
+          text-transform: uppercase;
+
+          &.small-label {
+            font-weight: 400;
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  & tbody {
+    & > tr {
+      border-bottom: 1px solid #e5e5e5;
+
+      &:hover {
+        & > .dims {
+          background-color: #f7cf2d;
+        }
+      }
+
+      & > td {
+        padding: 20px;
+
+        &:hover {
+          background-color: #f7cf2d;
+        }
+
+        &.clamps-table-button-td:hover {
+          background-color: transparent;
+        }
+
+        &.dims {
+          font-weight: bold;
+          border-bottom: 3px solid #000;
+        }
+      }
+    }
+  }
+
+  &-button {
+    width: 100%;
+    padding: 17px 20px 15px;
+    background-color: #f7cf2d;
+    font-family: 'Gotham Pro';
+    font-weight: bold;
+    color: #000;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &-collapse {
+    &-button {
+      position: relative;
+      display: flex;
+      font-family: 'Gotham Pro';
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      padding: 20px 10px;
+      border-top: 1px solid #d1d1d1;
+      border-bottom: 10px solid #000;
+
+      &:after {
+        content: '';
+        width: 0; 
+        height: 0; 
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #000;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transition: 0.1s linear transform;
+      }
+
+      & > div {
+        width: 50%;
+      }
+    }
+
+    &-content {
+      display: none;
+
+      &-row {
+        display: flex;
+        font-family: 'Gotham Pro';
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
+        padding: 20px 10px;
+
+        & + .clamps-table-collapse-content-row {
+          border-top: 1px solid #d1d1d1;
+        }
+
+        &-title {
+          width: 50%;
+
+          & > div {
+            color: rgba(0, 0, 0, 0.7);
+          }
+
+          & > b {
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+
+        &-price {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    &.opened {
+      & .clamps-table-collapse-button:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

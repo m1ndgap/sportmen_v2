@@ -1,0 +1,236 @@
+.main-tiles {
+  &-wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+
+  &-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px 0;
+  }
+
+  &-item {
+    width: calc(50% - 10px);
+    background-color: #e2e2e2;
+    margin: 10px 0;
+    display: block;
+    text-decoration: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+
+    @include media('<large') {
+      width: 100%;
+    }
+
+    &-bg1 {
+      background-image: url('../images/main/tile-1.jpg');
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #000;
+      }
+    }
+
+    &-bg2 {
+      background-image: url('../images/main/tile-2.jpg');
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #fff;
+      }
+    }
+
+    &-bg3 {
+      background-image: url('../images/main/tile-3.jpg');
+
+      @include media('<large') {
+        background-image: url('../images/main/tile-3-m.jpg');
+      }
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #fff;
+
+        @include media('<large') {
+          color: #000;
+        }
+      }
+    }
+
+    &-bg4 {
+      background-image: url('../images/main/tile-4.jpg');
+
+      @include media('<large') {
+        background-image: url('../images/main/tile-4-m.jpg');
+      }
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #000;
+
+        @include media('<large') {
+          color: #fff;
+        }
+      }
+    }
+
+    &-bg5 {
+      background-image: url('../images/main/tile-5.jpg');
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #000;
+      }
+    }
+
+    &-bg6 {
+      background-image: url('../images/main/tile-6.jpg');
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #fff;
+      }
+    }
+
+    &-bg7 {
+      background-image: url('../images/main/tile-7.jpg');
+      background-position-x: 50%;
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #000;
+        background-size: contain;
+      }
+    }
+
+    &-bg8 {
+      background-image: url('../images/main/tile-8.jpg');
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #fff;
+      }
+    }
+
+    &-bg9 {
+      background-image: url('../images/main/tile-9.jpg');
+
+      & .main-tiles-item-title,
+      & .main-tiles-item-link {
+        color: #000;
+      }
+    }
+
+    &-inner {
+      width: 610px;
+      padding: 40px 100px;
+
+      @include media('<large') {
+        width: 100%;
+        padding: 20px 20px;
+        min-height: 100px;
+        position: relative;
+      }
+    }
+
+    &-title {
+      font-family: 'Gotham Pro';
+      font-size: 30px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-bottom: 100px;
+
+      @include media('<large') {
+        font-size: 24px;
+        margin-bottom: 0;
+        padding-right: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-link {
+      font-family: 'Gotham Pro';
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      text-decoration: underline;
+
+      &:after {
+        content: ' →';
+      }
+
+      @include media('<large') {
+        display: none;
+      }
+    }
+
+    &:nth-child(odd) {
+      margin-right: 10px;
+
+      @include media('<large') {
+        margin: 0;
+      }
+
+      & > .main-tiles-item-inner {
+        float: right;
+        padding: 40px 100px 40px 0;
+
+        @include media('<large') {
+          float: none;
+          padding: 40px 20px;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      margin-left: 10px;
+
+      @include media('<large') {
+        margin: 0;
+      }
+
+      & > .main-tiles-item-inner {
+        padding: 40px 0 40px 100px;
+
+        @include media('<large') {
+          float: none;
+          padding: 40px 20px;
+        }
+      }
+    }
+  }
+
+  &-huge {
+    padding: 10px 20px;
+
+    @include media('<large') {
+      padding: 30px 0;
+    }
+    
+    & > .main-tiles-item-huge {
+      width: 100%;
+
+      & > .main-tiles-item-inner {
+        width: 1240px;
+        margin: 0 auto;
+        float: none;
+        padding: 40px 0;
+
+        @include media('<large') {
+          width: 100%;
+          padding: 40px 20px;
+        }
+      }
+    }
+  }
+}

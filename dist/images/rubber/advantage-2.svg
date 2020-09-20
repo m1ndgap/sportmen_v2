@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="135px" viewBox="0 0 140 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="advantage-2" transform="translate(2.100000, 71.100000)" stroke-width="5">
+            <g id="Group" transform="translate(0.000000, 32.000000)">
+                <path d="M0.4,29.4 L122.9,29.4" id="Path" stroke="#000000"></path>
+                <path d="M0.4,15 L122.9,15" id="Path" stroke="#000000"></path>
+                <path d="M0.4,0.6 L10.4,0.6" id="Path" stroke="#F7CF2D"></path>
+                <path d="M35,0.6 L48.1,0.6" id="Path" stroke="#F7CF2D"></path>
+                <path d="M73.7,0.6 L88.6,0.6" id="Path" stroke="#F7CF2D"></path>
+                <path d="M112.9,0.6 L122.9,0.6" id="Path" stroke="#F7CF2D"></path>
+            </g>
+            <g id="Group" transform="translate(10.000000, 0.000000)" stroke="#F7CF2D">
+                <path d="M22.8,33 C22.8,40.6 17.8,46.8 11.6,46.8 C5.4,46.8 0.4,40.6 0.4,33 C0.4,27.7 6,11.6 9.3,2.5 C10.2,1.11022302e-16 13.1,1.11022302e-16 14,2.5 C17.2,11.6 22.8,27.6 22.8,33 Z" id="Path"></path>
+                <path d="M62.9,33 C62.9,40.6 57.9,46.8 51.7,46.8 C45.5,46.8 40.5,40.6 40.5,33 C40.5,27.7 46.1,11.6 49.4,2.5 C50.3,1.11022302e-16 53.2,1.11022302e-16 54.1,2.5 C57.3,11.6 62.9,27.6 62.9,33 Z" id="Path"></path>
+                <path d="M102.9,33 C102.9,40.6 97.9,46.8 91.7,46.8 C85.5,46.8 80.5,40.6 80.5,33 C80.5,27.7 86.1,11.6 89.4,2.5 C90.3,1.11022302e-16 93.2,1.11022302e-16 94.1,2.5 C97.4,11.6 102.9,27.6 102.9,33 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

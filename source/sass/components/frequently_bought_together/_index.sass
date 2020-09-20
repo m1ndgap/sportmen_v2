@@ -1,0 +1,151 @@
+.fbt-also-bought
+  width: 100%
+  margin-top: 90px
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flex-start
+  @include media('<large')
+    margin-top: 71px
+  @include media('<small')
+    overflow: hidden
+    width: 90%
+    margin: auto
+    margin-top: 25px
+
+.fbt-ab-title
+  display: flex
+  flex-flow: row nowrap
+  width: 100%
+  h1
+    font-size: 48px
+    font-weight: 900
+    text-transform: uppercase
+    letter-spacing: -0.2px
+  @include media('<large')
+    h1
+      font-size: 29px
+      font-weight: 700
+      display: block
+      width: 300px
+  @include media('<small')
+    flex-flow: column nowrap
+    width: 90%
+    margin: auto
+    h1
+      font-size: 26px
+      width: 100%
+
+.fbt-ab-arrows
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  width: 210px
+  align-items: center
+  margin-left: auto
+  div
+    transition: 300ms
+    width: 68px
+    height: 58px
+    background-size: 70%
+    background-repeat: no-repeat
+    background-position: top 15px right 8px
+
+    &:nth-of-type(1)
+      background-image: url('../images/rd_arrow_black_short.svg')
+      transform: scaleX(-1)
+    &:nth-of-type(2)
+      background-image: url('../images/rd_arrow_black_short.svg')
+    &:hover
+      background-color: $lyellow
+  @include media('<small')
+    width: 100%
+
+
+
+.fbt-ab-products
+  padding: 0px
+  margin: 0px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: flex-start
+  @include media('<large')
+    margin-top: 50px
+  @include media('<small')
+
+.fbt-ab-products
+  .slick-slide
+    margin: 0 10px
+    li
+      display: flex !important
+  @include media('<small')
+    .slick-slide
+      margin: 0 10px
+      li
+        display: inline-block !important
+      h3
+        height: 70px
+  .slick-list
+    margin: 0 -10px
+
+
+.fbt-ab-card
+  height: 327px
+  list-style: none
+  flex-basis: 24%
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+
+  h3
+    margin: 0px
+    margin-top: 20px
+    font-weight: 400
+    font-size: 18px
+  a
+    position: relative
+    height: 210px
+    width: 294px
+    img
+      height: 210px
+      width: 100%
+    span
+      transition: all 0.3s ease-out
+      position: absolute
+      top: 0px
+      right: 0px
+      width: 294px
+      height: 210px
+      background-color: $lyellow
+      opacity: 0
+      text-transform: uppercase
+      text-decoration: underline
+      font-weight: 800
+      color: $black
+      font-size: 24px
+      text-align: center
+      padding-top: 32%
+      &:hover
+        opacity: 1
+  @include media('<large')
+    h3
+      font-size: 16px
+    a
+      width: 166px
+      span
+        display: none
+      img
+        height: auto
+  @include media('<small')
+    display: none
+
+
+.fbt-ab-card-mobile
+  @include media('<small')
+    flex-basis: 44%
+    display: flex
+    height: 250px
+    width: 130px
+    a
+      width: 130px
+      height: 100px

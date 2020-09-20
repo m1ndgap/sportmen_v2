@@ -1,0 +1,965 @@
+/*-------------------------------------------
+/* REDESIGN HEADER STYLES
+/*-------------------------------------------
+
+.wrapper
+  padding-top: 108px
+  background-color: $white
+
+@media only screen and (max-width: 1350px)
+  .wrapper
+    padding-top: 114px
+
+@media only screen and (max-width: 960px)
+  .wrapper
+    padding-top: 108px
+
+@media only screen and (max-width: 510px)
+  .wrapper
+    padding-top: 92px
+
+
+
+/* filler for the test page
+.test-test
+  height: 90vh
+  background-color: $white
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  .yellow-button
+    span
+      letter-spacing: 0px
+
+.header-main-menu-mobile
+  position: absolute
+
+
+.nav
+  font-family: Gotham Pro
+  font-weight: 300
+
+.header-top-bar
+  background-color: $black
+  height: 40px
+  width: 100%
+
+
+// .yellow-button
+//   display: block
+//   text-decoration: none
+//   position: relative
+//   &:hover
+//     div
+//       &:nth-of-type(1)
+//         right: 0px
+//       &:nth-of-type(2)
+//         left: 0px
+//   div
+//     position: relative
+//     height: 15px
+//     width: 196px
+//     background-color:  $lyellow
+//     transition: 0.5s
+//     &:nth-of-type(1)
+//       right: -5px
+//     &:nth-of-type(2)
+//       left: -5px
+//   span
+//     letter-spacing: 2px
+//     position: absolute
+//     width: 168px
+//     text-align: center
+//     top: 5px
+//     left: 15px
+//     color: $black
+//     text-transform: uppercase
+//     font-family: 'MyriadPro', sans-serif
+//     font-size: 14px
+//     font-weight: 700
+//     z-index: 10
+//
+// .yb-lg
+//   div
+//     width: 210px
+//     height: 20px
+//   span
+//     top: 10px
+//     left: 20px
+
+// @media only screen and (max-width: 1440px)
+//   .yellow-button
+//     div
+//       &:nth-of-type(2)
+//         left: -5px
+//         top: -1px
+
+.wrapper-container
+  margin: auto
+  max-width: 1920px
+  .wrapper-top-bar
+    width: 100%
+    height: 40px
+    display: flex
+    padding: 0px 35px 0px
+    justify-content: space-between
+    align-items: center
+    .we-work
+      font-size: 14px
+      color: white
+      span
+        font-family: 'Gotham Pro'
+        font-weight: 800
+    .best-price-btn
+      position: relative
+      text-transform: uppercase
+      text-decoration: none
+      color:  $lyellow
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      border-bottom: 2px solid  $lyellow
+      text-decoration: none
+      padding-left: 30px
+      &::after
+        position: absolute
+        content: ''
+        display: block
+        height: 20px
+        width: 20px
+        top: -3px
+        left: -1px
+        background-image: url('../images/ok_yellow.svg')
+      //img
+        margin-right: 5px
+        margin-bottom: 3px
+
+    .your-city
+      position: relative
+      color: white
+      font-size: 14px
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      display: flex
+      span
+        text-decoration: underline
+        color: white
+        font-family: 'Gotham Pro'
+        font-weight: 300
+      &::after
+        content: ''
+        position: absolute
+        width: 0px
+        height: 0px
+        right: -10px
+        top: 5px
+        border-left: 3px solid transparent
+        border-right: 3px solid transparent
+        border-top: 5px solid $white
+  @include media ('<small')
+    .wrapper-top-bar
+      padding: 0px
+
+.nav
+  .header-nav-container
+    background: white
+    display: flex
+    height: 67px
+    justify-content: space-between
+    align-items: center
+    position: relative
+    padding: 0px 20px
+    .main-submenu
+      // margin: 0
+      // list-style: none
+      // white-space: nowrap
+      // padding: 5px
+      // z-index: 1
+      // position: absolute
+      // top: 100%
+      // left: 0
+      // background: grey
+      // padding: 10px 20px
+      // padding-top: 40px
+      // //display: none
+      // min-width: calc(100%)
+      a
+        font-size: 14px
+        color: $black
+        text-decoration: none !important
+    .header-main-menu
+      font-family: 'Gotham Pro'
+      font-weight: 400
+      span
+        z-index: 2
+      .header-main-menu-list
+        margin-left: -40px
+        margin-bottom: 0px
+        margin-top: 0px
+        list-style: none
+        display: flex
+        .header-main-menu-list__item
+          text-transform: uppercase
+          color: $black
+          font-family: 'Gotham Pro'
+          font-weight: 400
+        .with-submenu
+          > span
+            padding-right: 15px
+            cursor: default
+            z-index: 2
+            &::after
+              content: ''
+              position: absolute
+              top: 5px
+              right: 0px
+              width: 0
+              height: 0
+              border-left: 4px solid transparent
+              border-right: 4px solid transparent
+              border-top: 6px solid $black
+          &:hover
+            .main-submenu
+              display: block
+          .main-submenu
+            padding: 0
+            margin: 0
+            list-style: none
+            white-space: nowrap
+            padding: 5px
+            z-index: 1
+            position: absolute
+            top: calc(100% - 40px)
+            left: 0
+            background: white
+            padding: 20px 20px
+            padding-top: 80px
+            //display: none
+            min-width: calc(100%)
+            a
+              font-size: 14px
+              color: $black
+              text-decoration: none !important
+          .main-menu-sub-2, .main-menu-sub-3, .main-menu-sub-4
+            li
+              list-style: none
+              .main-submenu2
+                justify-content: center
+                li
+                  width: 16%
+                  a
+                    svg
+                      border-right: 1px solid lightgrey
+                      width: 100%
+                      height: 90px
+                    span
+                      display: block
+                      max-width: 100%
+                      text-align: center
+                      word-spacing: 1337px
+                      white-space: normal
+                      line-height: 18px
+                      .invisible
+                        display: inline
+                        color: white
+                  &:last-child
+                    a
+                      svg
+                        border-right: none
+          .main-menu-sub-1
+            li
+              list-style: none
+            > li, ul
+              display: flex
+              flex-flow: row nowrap
+              justify-content: flex-start
+            > li
+              > a
+                font-size: 20px
+                font-family: 'Gotham Pro'
+                font-weight: 800
+                letter-spacing: -0.5px
+                display: block
+                width: 25%
+                margin-top: 4px
+            .main-submenu2
+              border-top: 1px solid lightgrey
+              width: 82%
+              margin-top: 20px
+              padding-top: 15px
+              li
+                flex-basis: 19%
+              a
+                display: flex
+                flex-flow: column nowrap
+                align-items: center
+                svg
+                  width: 100%
+                  height: 90px
+                &:hover
+                  svg
+                    .st1, .st0, .st2, .st3
+                      stroke: $hyellow
+                span
+                  display: block
+                  max-width: 100%
+                  text-align: center
+                  word-spacing: 1337px
+                  white-space: normal
+                  line-height: 18px
+              .premium-menu-item
+                margin-top: -15px
+                margin-bottom: -20px
+                background-color: $black
+                svg
+                  position: relative
+                  top: 0px
+                  .st0
+                    stroke: $lyellow
+                &:hover
+                  svg
+                    position: relative
+                    top: -3px
+                a
+                  margin-top: 15px
+                  color: $lyellow
+                  font-family: 'Gotham Pro'
+                  font-weight: 800
+
+          .main-menu-sub-2, .main-menu-sub-3, .main-menu-sub-4
+            .main-submenu2
+              display: flex
+              flex-flow: row nowrap
+              justify-content: center
+              a
+                display: flex
+                flex-flow: column nowrap
+                align-items: center
+                svg
+                  width: 150px
+                  height: 150px
+                &:hover
+                  svg
+                    .st1, .st0, .st2, .st3
+                      stroke: $hyellow
+
+
+
+        .header-main-menu-list__item + li
+          margin-left: 27px
+          a
+            color: $black
+            font-size: 14px
+            text-decoration: none
+            z-index: 2
+      > a, span
+        font-size: 14px
+        font-weight: 400
+        line-height: 14px
+        position: relative
+        text-decoration: none
+        transition: .2s
+    .header-nav-phones
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      z-index: 2
+      .header-nav-phones__link
+        text-decoration: none
+        color: $black
+        text-decoration: none
+    .header-order-call-btn
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      color: $black
+      z-index: 2
+      padding: 4px 30px
+      span
+        display: block
+        margin-top: 3px
+    .header-basket
+      margin-right: 15px
+      margin-top: 5px
+      position: relative
+      z-index: 2
+      .basket-count
+        position: absolute
+        top: -11px
+        right: -2px
+        background-color:  $lyellow
+        color: $black
+        border-radius: 50%
+        font-size: 10px
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        text-align: center
+        height: 17px
+        width: 17px
+        padding-top: 2px
+.nav
+  .header-nav-container-short
+    height: 55px
+
+.no-submenu
+  z-index: 2
+  a
+    z-index: 2
+    text-decoration: none
+    font-size: 14px
+
+
+@media only screen and (max-width: 1350px)
+  .header-top-bar
+    height: 30px
+    .wrapper-container
+      .wrapper-top-bar
+        height: 30px
+        .best-price-btn
+          font-size: 14px
+          padding-left: 18px
+          &::after
+            height: 15px
+            width: 15px
+            background-repeat: no-repeat
+            top: -1px
+            left: 0px
+
+  .nav
+    .header-nav-container
+      padding: 0px 20px 0px
+      flex-flow: row wrap
+      height: auto
+      .header-main-menu
+        width: 90%
+        order: 5
+        margin-bottom: 15px
+        > ul
+          width: 100%
+          justify-content: space-around
+      .header-nav-phones
+        margin-top: 12px
+        display: flex
+        flex-flow: row nowrap
+        font-size: 20px
+        width: 40%
+        justify-content: space-around
+      .header-basket
+        margin-left: 20px
+        margin-top: 15px
+        margin-bottom: 3px
+        order: 6
+      .header-main-menu
+        margin: 0px
+        .header-main-menu-list
+          .with-submenu
+            .main-submenu
+              padding-top: 53px
+              top: calc(100% - 16px)
+            .main-menu-sub-1
+              > li
+                > a
+                  max-width: 25%
+                  word-spacing: 1337px
+                  white-space: normal
+              .main-submenu2
+                padding-left: 0px
+                li
+                  flex-basis: 25%
+      .header-order-call-btn
+        margin-top: 10px
+
+@media only screen and (min-width: 1350px) and (max-width: 1450px)
+  .nav
+    .header-nav-container
+      .header-order-call-btn
+        max-width: 150px
+        min-width: 150px
+        padding: 4px 8px
+        span
+          line-height: 14px
+
+
+.header-menu-fixed
+  position: fixed
+  width: 100%
+  z-index: 1000
+  transition: 0.5s
+
+.header-logo, .footer-logo
+  position: relative
+  z-index: 2
+  a
+    &:nth-child(1)
+      transition: 0.3s
+      display: block
+      height: 100px
+      width: 240px
+      background-image: url("../images/rd_logo_2_oneline.svg")
+      background-repeat: no-repeat
+      background-position-y: 7px
+
+.header-logo
+  a
+    &:nth-child(1)
+      width: 160px
+      height: 70px
+      margin-bottom: 7px
+
+.footer-logo
+  a
+    margin: 0px
+
+.header-logo-short
+  position: relative
+  z-index: 2
+  a
+    &:nth-child(1)
+      transition: 0.3s
+      display: block
+      height: 63px
+      width: 160px
+      background-image: url('../images/rd_logo_2_oneline.svg')
+      background-repeat: no-repeat
+
+
+@media only screen and (max-width: 1350px)
+  .header-logo, .header-logo-short
+    a
+      &:nth-child(1)
+        background-image: url('../images/rd_logo_2_oneline.svg')
+        background-size: 150px
+        background-position: 12px -6px
+        height: 30px
+        margin-bottom: 7px
+
+/*----------------------------------
+/* HEADER GREY BAR
+
+
+.header-nav-container
+  &::after
+    display: block
+    position: absolute
+    content: " "
+    background-color: $lightgrey
+    height: 1px
+    width: 97%
+    left: 1.5%
+    top: 100%
+    z-index: 1002
+
+@media only screen and (max-width: 960px)
+  .header-nav-container
+    &::after
+      width: 92%
+      left: 3.5%
+
+.main-submenu
+  &::after
+    display: block
+    position: absolute
+    content: " "
+    background-color: $lightgrey
+    height: 1px
+    width: 97%
+    left: 1.5%
+    top: 100%
+    z-index: 1002
+
+@media only screen and (max-width: 960px)
+  .header-main-menu-mobile
+    &::after
+      display: block
+      position: absolute
+      content: " "
+      background-color: $lightgrey
+      height: 1px
+      top: 100%
+      z-index: 1002
+      width: 92%
+      left: 3.5%
+
+.no_after
+  &::after
+    display: none
+
+
+
+
+/*----------------------------------
+/* HEADER CART MENU
+
+.header-nav-container
+  .hide-sm
+    display: block
+  .hide-lg
+    display: none
+  #header-basket__hover
+    transition: 0.3s
+    position: absolute
+    right: 0px
+    top: 100%
+    background-color: white
+    display: flex
+    flex-flow: column nowrap
+    .basket__item
+      position: relative
+      width: 600px
+      height: 85px
+      margin: 15px 25px
+      display: flex
+      flex-flow: column wrap
+      img
+        width: 115px
+        display: block
+      .basket__item-text
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-between
+        width: 70%
+        height: calc(100%)
+        p
+          margin-top: 5px
+          display: block
+          text-transform: uppercase
+          font-family: 'Gotham Pro'
+          font-weight: 800
+          &:nth-child(1)
+            padding-right: 20%
+            margin-bottom: 0px
+          &:nth-child(2)
+            font-family: 'Gotham Pro'
+            font-weight: 300
+            margin-bottom: 5px
+      .basket__item-close
+        position: absolute
+        height: 15px
+        width: 15px
+        right: 10px
+        top: 10px
+        background: url('../images/rd_close_cross_yellow.svg') no-repeat
+        cursor: pointer
+    .basket__buttons
+      display: flex
+      flex-flow: row nowrap
+      margin: 0px
+      margin-top: 100px
+      width: 100%
+      a, p
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 60px
+        margin-bottom: 0px
+        width: 50%
+        text-decoration: none
+      p
+        font-size: 30px
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        margin-right: auto
+        margin-top: 0px
+        .basket__item-price
+          display: block
+      .basket__keep-shopping-btn
+        text-align: center
+        cursor: pointer
+        margin-left: auto
+        color: $black
+
+.basket_empty_warning
+  width: 650px
+  font-size: 20px
+  color: $lightgrey
+  margin: 50px 0px 50px 0px
+  text-align: center
+
+
+
+/*----------------------------------
+/* HEADER MOBILE <960
+
+@media only screen and (max-width: 960px)
+
+  .header-menu-fixed
+    .wrapper-top-bar
+      justify-content: center
+    .hide-sm
+      display: none !important
+    .hide-lg
+      display: block
+    .header-nav-container
+      min-height: 50px
+      .header-mobile-menu-icon
+        position: relative
+        margin: 20px
+        margin-left: 3%
+        &::before
+          content: ""
+          height: 17px
+          width: 24px
+          position: absolute
+          left: -11px
+          bottom: -8px
+          background: linear-gradient(to bottom, black, black 20%, white 20%, white 40%, black 40%, black 60%, white 60%, white 80%, black 80%, black 100%)
+      .header-logo-mobile-phone
+        text-decoration: none
+        bottom: -10px
+        z-index: 1001
+        text-align: center
+        font-size: 15px
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        color: $black
+        text-decoration: none
+        bottom: 6px
+      .header-logo
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+        flex-basis: 80%
+        a
+          &:nth-child(1)
+            transition: 0.3s
+            height: 70px
+            width: 240px
+            background-repeat: no-repeat
+            background-position: 0px 8px
+            flex-basis: 50%
+            display: block
+            background-image: url('../images/rd_logo_2_oneline.svg')
+      .header-logo-short
+        min-width: 200px
+        a
+          &:nth-child(1)
+            display: none
+
+      .header-basket
+        z-index: 2
+        margin: 0px
+        margin-right: 3%
+      #header-basket__hover
+        width: 100%
+        .basket__item
+          margin: 15px 10px
+          width: 90%
+          .basket__item-text
+            margin-left: 10px
+            line-height: 14px
+          .basket__item-close
+            right: -2px
+            top: 5px
+        .basket__buttons
+          margin-top: 20px
+          flex-flow: column nowrap
+          a, p
+            width: 100%
+
+@media only screen and (max-width: 510px)
+  .header-menu-fixed
+    .header-nav-container
+      .header-logo
+        margin: 0px -20px 0px
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        flex-basis: 0%
+        a
+          &:nth-child(1)
+            background-position: center
+            margin-top: -10px
+            margin-bottom: -16px
+            margin-left: 10px
+      .header-logo-short
+        min-width: 0px
+  .header-logo-mobile-phone
+    position: relative
+  .h-l-m-p
+    bottom: 0px !important
+
+
+
+@media only screen and (max-width: 350px)
+  .header-menu-fixed
+    .header-nav-container
+      .header-logo
+        a
+          &:nth-child(1)
+            width: 200px
+      #header-basket__hover
+        .basket__buttons
+          p
+            font-size: 24px
+
+
+/*----------------------------------
+/* HEADER MOBILE MENU
+
+@media only screen and (max-width: 960px)
+  .header-main-menu-mobile
+    position: absolute
+    top: 100%
+    left: 0px
+    width: 100%
+    background: white
+    font-family: 'Gotham Pro'
+    font-weight: 300
+    .main-menu-mobile-wrapper
+      width: 90%
+      margin: 15px auto
+      .main-menu-mobile-list
+        width: 100%
+        padding-left: 0px
+        margin-bottom: 0px
+        list-style: none
+        display: flex
+        flex-flow: column nowrap
+        .main-menu-mobile-list__item
+          margin-top: 10px
+          padding-bottom: 10px
+          width: 100%
+          text-transform: uppercase
+          color: $black
+          font-family: 'Gotham Pro'
+          font-weight: 300
+          border-bottom: 1px solid $black
+          .main-submenu-mobile
+            padding: 0
+            margin: 0
+            list-style: none
+            white-space: nowrap
+            padding: 5px
+            z-index: 1
+            background: white
+            padding: 10px 20px
+
+            // display: none
+            min-width: calc(100%)
+            > li
+              > a
+                font-family: 'Gotham Pro'
+                font-weight: 800
+                font-size: 14px
+                color: $black
+                text-decoration: none !important
+              a
+                color: $black
+                text-decoration: none !important
+            li
+              margin-top: 7px
+            a
+              text-decoration: none
+              &:focus
+                font-family: 'Gotham Pro'
+                font-weight: 800
+                display: block
+                width: 100%
+                outline: none
+                background-color: $black
+                color: $lyellow
+                padding: 5px 10px
+            .main-submenu-mobile2
+              list-style: none
+              padding-left: 20px
+            .mobile-menu-premium
+              font-family: 'Gotham Pro'
+              font-weight: 800
+              display: block
+              width: 110%
+              outline: none
+              background-color: $black
+              padding: 5px 10px
+              text-align: center
+              margin-left: -5%
+              max-width: 400px
+              a
+                color: $lyellow
+
+        .with-submenu-mobile
+          > span
+            display: block
+            padding-right: 15px
+            cursor: default
+            width: 100%
+            &::after
+              content: ''
+              position: absolute
+              top: 5px
+              right: 0px
+              width: 0
+              height: 0
+              border-left: 4px solid transparent
+              border-right: 4px solid transparent
+              border-top: 6px solid $black
+          //&:hover
+            .main-submenu-mobile
+              display: block
+
+        .main-menu-mobile-list__item + li
+          a
+            font-size: 16px
+            color: $black
+            text-decoration: none
+      > a, span
+        font-size: 16px
+        font-weight: 300
+        position: relative
+        text-decoration: none
+        transition: .2s
+      .main-menu-mobile__hours
+        margin: 15px auto
+        width: 100%
+        p
+          font-size: 20px
+          font-family: 'Gotham Pro'
+          font-weight: 800
+        span
+          font-size: 18px
+      .main-menu-mobile__phones
+        width: 100%
+        display: flex
+        flex-flow: column nowrap
+        a
+          text-decoration: none
+          text-align: center
+          display: block
+          width: 100%
+          font-size: 30px
+          font-family: 'Gotham Pro'
+          font-weight: 800
+          color: $black
+      .yellow-button
+        display: block
+        padding: 15px 30px
+        margin: 15px auto
+        width: 100%
+        max-width: 300px
+        span
+          font-weight: 700
+
+
+@media only screen and (max-width: 500px)
+  .header-main-menu-mobile
+    width: 100%
+    .main-menu-mobile-wrapper
+      width: 90%
+      .main-menu-mobile-list
+        padding-left: 0px
+      .main-menu-mobile__phones
+        a
+          font-size: 8.4vw
+
+
+
+@media only screen and (max-width: 350px)
+  .header-main-menu-mobile
+    width: 100%
+    .main-menu-mobile-wrapper
+      width: 90%
+      margin: 10px auto
+      .main-menu-mobile__hours
+        margin: 10px auto
+      .main-menu-mobile-list
+        padding-left: 0px
+      .yellow-button
+        margin: 10px auto

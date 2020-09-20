@@ -1,0 +1,529 @@
+/*----------------------------------
+/* FOOTER
+/*----------------------------------
+
+
+.footer
+  font-family: 'Gotham Pro'
+  display: flex
+  flex-flow: column wrap
+  height: 600px
+  @include media ('<huge')
+    height: 700px
+  @include media ('<large')
+    height: 1000px
+  @include media ('<small')
+    height: auto
+    flex-flow: column nowrap
+
+.footer-logo
+  a
+    &:nth-child(1)
+      background-image: url("../images/rd_logo_2_oneline.svg")
+      background-position-x: 27px
+      background-size: 90%
+
+.footer-logo-buttons
+  height: 500px
+  width: 27%
+  max-width: 300px
+  background-image: url('../images/rd_footer-logo-bg.svg')
+  background-repeat: no-repeat
+  display: flex
+  flex-flow: column nowrap
+  @include media ('<large')
+    height: 1000px
+    background-size: 105%
+  @include media ('<small')
+    order: 1
+    height: auto
+    background-image: none
+    width: 320px
+    margin: auto
+    margin-top: 30px
+
+.footer-logo
+  margin-bottom: 50px
+  @include media ('<large')
+    a
+      &:nth-child(1)
+        width: 210px
+  @include media ('<small')
+    display: none
+
+.footer-order-call
+  width: 230px
+  letter-spacing: 0px !important
+  align-self: center
+  padding: 8px 30px
+  font-size: 14px
+  @include media ('<large')
+    margin-left: 5%
+    width: 210px
+  @include media ('<small')
+    margin-left: 0px
+
+.footer-order-call + .footer-order-call
+  margin-top: 20px
+
+.footer-confidentiality, .footer-designer-link
+  margin-left: 9%
+  margin-top: 25px
+
+
+.footer-confidentiality
+  margin-top: 50px
+  color: $white
+
+.footer-designer-link
+  text-decoration: none
+  background-image: url('../images/bogomazovart.svg')
+  color: $lightgrey
+  background-repeat: no-repeat
+  background-position: -8px 15px
+  padding-bottom: 20px
+  background-size: 220px
+
+
+.footer-navigation
+  color: $white
+  height: 300px
+  width: 60%
+  ul
+    margin-top: 0px
+    list-style: none
+    padding: 0px
+    li
+      a
+        color: $white
+        font-weight: 300
+    .no-sub + .no-sub
+      margin-top: 15px
+  > ul
+    width: 100%
+    display: flex
+    flex-flow: column wrap
+    height: 300px
+    > li
+      width: 33%
+      margin-top: 45px
+      ul
+        padding-left: 3px
+        li
+          margin-top: 5px
+      > a, span
+        font-weight: 700
+        color: $white
+        text-transform: uppercase
+  @include media ('<huge')
+    width: 70%
+  @include media ('<large')
+    width: 60%
+    height: 450px
+    > ul
+      height: 500px
+      > li
+        width: 50%
+      .first-no-sub
+        margin-top: 74px
+  @include media ('<small')
+    width: 320px
+    margin: auto
+    height: auto
+    > ul
+      margin-left: 10%
+      height: auto
+      width: 100%
+      > li
+        margin-top: 20px
+        width: 100%
+      .first-no-sub
+        margin-top: 20px
+
+.footer-downloads
+  width: 59%
+  justify-content: space-between
+  margin-top: 50px
+  display: flex
+  a
+    white-space: nowrap
+    display: block
+    font-family: 'Gotham Pro'
+    text-decoration: none
+    font-weight: 800
+    color:  $lyellow
+    text-transform: uppercase
+    border-bottom: 1px solid  $lyellow
+    margin-right: 70px
+    position: relative
+    text-decoration: none
+    &:nth-child(2)
+      margin-left: 30px
+    &::after
+      content: " "
+      position: absolute
+      top: 5px
+      right: -55px
+      display: block
+      width: 40px
+      height: 15px
+      background: url('../images/rd_arrow_yellow_long.svg') no-repeat
+      transition: 0.5s
+    &:hover
+      &::after
+        right: -60px
+  @include media('<huge')
+    width: 73%
+  @include media('<large')
+    height: 50px
+    margin-top: 20px
+    flex-flow: column nowrap
+    justify-content: space-between
+    align-items: flex-start
+    a
+      margin-bottom: 20px
+      width: auto
+      margin: 0px
+      &:nth-child(2)
+        margin-left: 0px
+  @include media ('<small')
+    margin-left: 10%
+    a
+      &::after
+        display: none
+
+.footer-second-block
+  height: 200px
+  display: flex
+  flex-flow: column wrap
+  width: 60%
+  @include media('<huge')
+    height: 300px
+  @include media('<large')
+    height: 420px
+  @include media ('<small')
+    height: auto
+    width: 320px
+    margin: auto
+
+
+.footer-contact-info
+  margin-top: 50px
+  width: 60%
+  justify-content: space-between
+  color: $white
+  display: flex
+  flex-flow: row nowrap
+  p
+    margin: 0px
+    display: block
+    width: 45%
+  @include media('<huge')
+    margin-top: 20px
+    width: 80%
+    justify-content: flex-start
+    p
+      width: 49%
+  @include media('<large')
+    width: 100%
+  @include media ('<small')
+    margin-left: 10%
+    flex-flow: column nowrap
+    p
+      width: 100%
+
+
+.footer-times, .footer-address
+  font-weight: 300
+  color: $lightgrey
+  span
+    font-weight: 700
+    display: block
+
+.footer-phones
+  display: flex
+  flex-flow: column nowrap
+  margin-top: 20px
+  color: $white
+  font-family: "Gotham Pro"
+  font-weight: 500
+  font-size: 24px
+  margin-left: -2%
+  p
+    margin: 0px
+    margin-top: 20px
+  @include media ('<huge')
+    width: 80%
+    margin-left: 0px
+    flex-flow: column wrap
+    height: 100px
+    p
+      width: 45%
+  @include media ('<large')
+    flex-flow: column nowrap
+    height: auto
+    width: 100%
+    p
+      width: 100%
+  @include media ('<small')
+    margin-left: 10%
+
+
+.footer-email
+  a
+    color: $white
+    font-family: "Gotham Pro"
+    font-weight: 500
+    font-size: 24px
+
+
+footer
+  padding-bottom: 30px
+  margin-bottom: -1px
+  background-color: $black
+  .container-rd
+    display: flex
+    flex-flow: column wrap
+    height: 431px
+    color: white
+    .hide-xl
+      display: none
+    .hide-xs
+      display: block
+    .footer-logo-buttons
+
+      .footer-phones
+        color: white
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        font-size: 24px
+        line-height: 29px
+        position: relative
+        margin-top: 45px
+        margin-left: 20px
+        p
+          display: block
+          margin-left: 20px
+      a
+        margin: 0px
+      .yellow-button
+        margin: 40px 0 0 30px
+    nav
+      width: 60%
+      margin-top: 0px
+      > ul
+        margin-top: 0px
+        width: 100%
+        list-style-type: none
+        height: 350px
+        flex-flow: column wrap
+        display: flex
+        list-style-type: none
+        padding-left: 0px
+        > li
+          ul
+            padding-left: 0px
+            list-style-type: none
+            li
+              a
+                font-family: 'Gotham Pro'
+                font-weight: 300
+                font-size: 14px
+                color: white
+          > a, span
+            display: block
+            font-family: 'Gotham Pro'
+            font-weight: 800
+            font-size: 16px
+            color: white
+            margin: 20px 0px 10px
+            text-transform: uppercase
+            text-decoration: underline
+    .footer-links
+      display: flex
+      flex-flow: column nowrap
+      .footer-links-site
+        width: 240px
+        padding-top: 20px
+        display: flex
+        flex-flow: column nowrap
+        a
+          margin-bottom: 20px
+    .footer-downloads
+
+    .footer-contact-info
+      display: flex
+      flex-flow: column nowrap
+      font-family: 'Gotham Pro'
+      font-weight: 300
+      p, span
+        display: block
+      span
+        font-family: 'Gotham Pro'
+        font-weight: 800
+      .footer-email
+        a
+          font-family: 'Gotham Pro'
+          font-weight: 800
+          font-size: 20px
+          color: white
+          text-transform: lowercase
+          text-decoration: underline
+
+
+
+
+@media only screen and (max-width: 1440px)
+  footer
+    .container-rd
+      .hide-lg
+        display: none
+      .hide-xl
+        display: block
+
+  .footer
+    max-width: 1440px
+    .container-rd
+      height: 560px
+      .footer-logo-phones
+        margin-right: 2%
+        .footer-phones
+          text-align: center
+        .yellow-button
+          display: block
+          margin-top: 20px
+      nav
+        width: 70%
+        > ul
+          height: 330px
+          > li
+            width: 30%
+      .footer-contact-info
+        width: 70%
+        height: 100px
+        margin-top: 45px
+        flex-flow: column wrap
+        p
+          display: block
+          flex-basis: 25%
+
+@media only screen and (max-width: 1080px)
+
+  .footer
+    max-width: 1080px
+    .container-rd
+      height: 750px
+      .footer-logo-phones
+        min-width: 250px
+        margin-right: 10%
+        .footer-phones
+          margin-left: 0px
+          p
+            margin-left: 5px
+        .yellow-button
+          display: block
+          margin-top: 20px
+          margin-left: 10px
+      nav
+        width: 60%
+        > ul
+          height: 390px
+          > li
+            width: 50%
+      .footer-downloads
+        width: 60%
+      .footer-contact-info
+        width: 60%
+        height: 150px
+        margin-top: 45px
+        flex-flow: row wrap
+        p
+          display: block
+          flex-basis: 50%
+
+@media only screen and (max-width: 960px)
+  .footer
+    .container-rd
+      .footer-logo-phones
+        margin-right: 3%
+      .footer-downloads
+        width: 30%
+        flex-flow: row wrap
+        a
+          margin-right: auto
+          &:nth-child(2)
+            margin-top: 20px
+            margin-left: 0px
+
+@media only screen and (max-width: 768px)
+  .footer
+    .container-rd
+      height: 1080px
+      nav
+        width: 40%
+        align-self: flex-end
+        margin-right: 5%
+        > ul
+          height: 734px
+          > li
+            width: 100%
+      .footer-logo-phones
+        margin-right: 5%
+      .footer-downloads
+        align-self: flex-end
+        margin-right: 5%
+        width: 40%
+      .footer-contact-info
+        align-self: flex-end
+        margin-right: 5%
+        width: 40%
+        margin-top: 45px
+        flex-flow: column nowrap
+        height: auto
+        p
+          display: block
+          flex-basis: 100%
+
+@media only screen and (max-width: 580px)
+
+
+  .footer
+    .container-rd
+      height: 1500px
+      align-items: center
+      .hide-xs
+        display: none
+      .footer-logo-phones
+        order: 5
+        background: none
+        width: 100%
+        margin-right: 0px
+        p
+          margin-top: 25px
+          margin-left: 0px
+          font-size: 30px
+        .yellow-button
+          margin-top: 35px
+      nav
+        margin-left: 15px
+        align-self: center
+        width: 60%
+        min-width: 300px
+        margin-right: 0px
+        > ul
+          height: 734px
+          > li
+            width: 100%
+      .footer-downloads
+        margin-left: 15px
+        align-self: center
+        margin-right: 0px
+        width: 60%
+        min-width: 300px
+      .footer-contact-info
+        margin-left: 15px
+        align-self: center
+        margin-right: 0px
+        width: 60%
+        min-width: 300px
+        height: auto

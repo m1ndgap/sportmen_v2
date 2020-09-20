@@ -1,0 +1,721 @@
+$picker-dgrey: #565e61
+$picker-blue: #3f4b87
+$picker-orange: #f26522
+$picker-green: #00784b
+$picker-brown: #534542
+$picker-yellow: #f4d046
+$picker-black: #000000
+
+/* color picker mixin for active styles with colored shadow
+=pc-active-cp-shadow($color)
+  background-color: $color
+  &.active
+    bottom: 6px
+    right: -6px
+    width: 40px
+    height: 40px
+    box-shadow: 0px 13px 23px -7px rgba( $color, 0.8)
+    &:hover
+      bottom: 8px
+  @include media('<small')
+    &.active
+      width: 32px
+      height: 32px
+
+
+.pc-breadcrumbs
+  display: flex
+  flex-flow: row nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  .breadcrumbs-item
+    white-space: nowrap
+
+
+.pc-hide
+  display: inherit
+  @include media('<large')
+    display: none
+
+
+.wrapper
+  background-color: #fff
+
+.pc-wrapper
+  font-family: 'Gotham Pro'
+  box-sizing: border-box
+  max-width: 1240px
+  margin: auto
+  margin-bottom: 150px
+  padding-top: 30px
+
+  @include media('<large')
+    margin-bottom: 0px
+    max-width: 730px
+  @include media('<small')
+    max-width: 520px
+  &-main-content
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: flex-start
+
+.pc-main-title, .pc-main-title-mobile
+  font-size: 24px
+  margin: 0px
+  margin-left: 15px
+  font-weight: 400
+  text-transform: uppercase
+  @include media('<large')
+    font-size: 22px
+    margin-left: 0px
+  @include media('<small')
+    width: 90%
+    margin: auto
+
+.pc-main-title
+  @include media('<small')
+    display: none
+
+.pc-titles-small
+  display: none
+  @include media('<small')
+    margin-bottom: 30px
+    display: flex
+    flex-flow: column nowrap
+
+
+
+.pc-main-subtitle, .pc-main-subtitle-mobile
+  font-size: 14px
+  margin: 0px
+  margin-top: 5px
+  margin-left: 15px
+  margin-bottom: 18px
+  font-weight: 400
+  text-transform: uppercase
+  @include media('<large')
+    margin: 0px
+  @include media('<small')
+    width: 90%
+    margin: auto
+
+.pc-main-subtitle
+  @include media('<small')
+    display: none
+
+.pc-main-subtitle-mobile
+  @include media('<small')
+    height: 40px
+    text-align: right
+
+
+
+.pc-sales-hit
+  position: relative
+  padding-top: 36px
+  &::after
+    display: block
+    position: absolute
+    top: 0px
+    content: 'хит продаж'
+    background-color: #d3ff7f
+    width: 130px
+    height: 28px
+    text-transform: uppercase
+    font-size: 14px
+    padding-top: 7px
+    text-align: center
+  @include media('<small')
+    padding-top: 7px
+    padding-right: 12px
+
+
+.pc-info-wrapper
+  width: 100%
+
+.pc-selectors-wrapper
+  width: 525px
+  @include media('<large')
+    width: 354px
+  @include media('<small')
+    width: 90%
+    margin: auto
+
+.pc-selectors
+  display: flex
+  flex-flow: column nowrap
+  ul
+    padding: 0px
+    li
+      list-style: none
+
+
+
+.pc-diam, .pc-caps
+  position: relative
+  margin: 0px
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  li
+    transition: all 0.3s ease-out
+    max-height: 87px
+    margin-top: 13px
+    padding: 15px 15px 0px 15px
+    flex-basis: 30%
+    display: flex
+    flex-flow: column nowrap
+    cursor: pointer
+    &:hover
+      background-color: $lightgrey
+    span
+      font-size: 16px
+      font-weight: 500
+    p
+      margin-top: 7px
+      font-size: 14px
+    &:nth-of-type(3)
+      p
+        line-height: 14px
+  @include media('<large')
+    flex-flow: column nowrap
+    li
+      margin-top: 0px
+      border-bottom: 1px solid $lightgrey
+
+.pc-diam
+  @include media('<large')
+  @include media('<small')
+
+
+.pc-med-selected-diam, .pc-med-selected-caps
+  display: none
+  @include media('<large')
+    transition: all 0.3s ease
+    display: block
+    margin: 0px
+    margin-left: auto
+    width: 30%
+    text-align: right
+    font-weight: 400
+    text-transform: lowercase
+    margin-right: 46px
+  @include media('<small')
+    display: block
+
+.pc-med-selected-caps
+  @include media('<large')
+    width: 50%
+    text-transform: none
+  @include media('<small')
+
+.pc-selectors-collapse
+  position: relative
+  display: none
+  @include media('<large')
+    font-size: 14px
+    margin-top: 38px
+    margin-bottom: 10px
+    text-transform: uppercase
+    font-weight: 700
+    display: flex
+    padding-bottom: 4px
+    border-bottom: 1px solid $black
+  @include media('<small')
+
+.pc-caps-collapse
+  @include media('<large')
+    margin-bottom: 13px
+    .pc-selectors-collapse
+      margin-top: 20px
+
+
+
+.pc-collapse-arrow
+  @include media('<large')
+    position: absolute
+    display: block
+    height: 0px
+    width: 0px
+    right: 0px
+    top: 7px
+    border-left: 3px solid transparent
+    border-right: 3px solid transparent
+    border-top: 5px solid #000000
+    transition: all 0.5s ease-out
+
+.arrow_rotate
+  transform: rotate(180deg)
+
+.pc-caps
+  margin-bottom: 20px
+  > span
+    margin-top: 15px
+  li
+    margin-top: 10px
+    &:nth-of-type(1)
+      flex-basis: 44%
+    &:nth-of-type(2)
+      padding-right: 5px
+      flex-basis: 52%
+  @include media('<large')
+    margin-bottom: 20px
+    li
+      margin-top: 0px
+    .pc-selectors-collapse
+      top: 38px
+
+
+.pc-selectors-titles
+  display: block
+  text-transform: uppercase
+  font-family: "Gotham Pro"
+  font-weight: 700
+  margin-top: 15px
+  margin-left: 15px
+  flex-basis: 100%
+  position: relative
+  &:after
+    position: absolute
+    right: 0px
+    top: 8px
+    content: ''
+    display: block
+    width: 335px
+    height: 1px
+    background-color: $lightgrey
+  @include media('<large')
+    display: none
+    // font-size: 15px
+    // margin-top: 37px
+    // margin-left: 0px
+    // margin-bottom: 20px
+    // letter-spacing: -0.5px
+    // display: flex
+    // flex-flow: row nowrap
+    // &::after
+    //   background-color: $black
+    //   width: 353px
+    //   top: 23px
+  @include media('<small')
+    // margin-top: 17px
+    // &::after
+    //   width: 100%
+
+
+.pc-selector-active
+  background-color: $lyellow
+  &:hover
+    background-color: $dyellow !important
+
+
+.pc-rack-color, .pc-strap-color
+  height: 40px
+  margin-top: 10px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+  span
+    text-transform: uppercase
+    font-weight: 700
+    margin-left: 18px
+    align-self: center
+  li
+    flex-basis: 10%
+    height: 40px
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: flex-end
+    a
+      transition: all 0.3s ease-out
+      position: relative
+      display: block
+      width: 27px
+      height: 27px
+      &:hover
+        transition: all 0.3s ease-out
+        bottom: 2px
+    &:nth-of-type(1)
+      margin-left: 4px
+      a
+        +pc-active-cp-shadow($picker-dgrey)
+    &:nth-of-type(2)
+      a
+        +pc-active-cp-shadow($picker-blue)
+    &:nth-of-type(3)
+      a
+        +pc-active-cp-shadow($picker-orange)
+    &:nth-of-type(4)
+      a
+        +pc-active-cp-shadow($picker-green)
+    &:nth-of-type(5)
+      a
+        +pc-active-cp-shadow($picker-brown)
+    &:nth-of-type(6)
+      a
+        +pc-active-cp-shadow($picker-yellow)
+    &:nth-of-type(7)
+      a
+        +pc-active-cp-shadow($picker-black)
+  @include media('<large')
+    flex-flow: row wrap
+    height: 80px
+    span
+      margin-left: 0px
+      margin-bottom: 20px
+      flex-basis: 100%
+  @include media('<small')
+    li
+      a
+        width: 22px
+        height: 22px
+
+.pc-rack-color
+  margin-top: 16px
+  margin-bottom: 21px
+
+
+.pc-prices-buy, .pc-prices-free-delivery, .pc-prices-add-to-cart, .pc-prices-old-price, .pc-prices-discount
+  text-align: center
+  margin: 0px
+  p
+    margin: 0px
+
+.pc-selectors-prices
+  padding-left: 18px
+  position: relative
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-end
+  @include media('<large')
+    padding-left: 0px
+    flex-flow: column nowrap
+  @include media('<small')
+
+.pc-prices-discount
+  top: 9px
+  left: 18px
+  padding-top: 6px
+  position: absolute
+  color: $white
+  background-color: #ff003c
+  height: 27px
+  width: 61px
+  font-size: 14px
+  @include media('<large')
+    top: 6px
+    left: 71px
+  @include media('<small')
+    top: 6px
+    left: 0px
+
+
+.pc-prices-old-price
+  text-decoration: line-through
+  padding-left: 65px
+  padding-top: 7px
+  font-size: 30px
+  vertical-align: text-bottom
+  p
+    margin-right: 10px
+  @include media('<large')
+    padding-left: 110px
+    font-size: 26px
+  @include media('<small')
+    padding-left: 65px
+
+
+.pc-prices-price
+  padding-top: 3px
+  margin: 0px
+  text-align: right
+  font-size: 36px
+  font-weight: 800
+  display: flex
+  justify-content: flex-end
+  align-items: flex-end
+  p
+    margin: 0px
+    height: 37px
+  @include media('<large')
+    justify-content: center
+    margin: 20px 0px
+    font-weight: 700
+    font-size: 28px
+  @include media('<small')
+
+.pc-selectors-buttons
+  margin-top: 9px
+  padding-left: 18px
+  position: relative
+  display: flex
+  flex-flow: row wrap
+  @include media('<large')
+    flex-flow: column nowrap
+    margin-top: 0px
+    padding: 0px
+  @include media('<small')
+
+.pc-prices-add-to-cart
+  height: 43px
+  flex-basis: 57%
+  border: 1px solid $lyellow
+  a
+    transition: all 0.3s ease-out
+    display: block
+    padding-top: 15px
+    height: 43px
+    width: 100%
+    text-align: center
+    color: $black
+    font-size: 14px
+    font-weight: 800
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 2px
+    &:hover
+      padding-top: 13px
+  @include media('<large')
+  @include media('<small')
+
+.pc-prices-buy
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-basis: 43%
+  background-color: $lyellow
+  a
+    transition: all 0.3s ease-out
+    padding-top: 15px
+    height: 43px
+    width: 100%
+    text-align: center
+    font-size: 14px
+    font-weight: 800
+    text-transform: uppercase
+    text-decoration: none
+    color: $black
+    letter-spacing: 2px
+    &:hover
+      padding-top: 13px
+  @include media('<large')
+  @include media('<small')
+
+
+.pc-prices-free-delivery
+  cursor: pointer
+  padding-top: 7px
+  height: 27px
+  background-color: $black
+  flex-basis: 100%
+  text-transform: uppercase
+  color: $white
+  p
+    font-size: 14px
+    letter-spacing: 1px
+  @include media('<large')
+  @include media('<small')
+
+
+.pc-info-wrapper
+  margin-top: 54px
+  width: 100%
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: flex-start
+  @include media('<large')
+  @include media('<small')
+
+.pc-info-tabs
+  position: relative
+  height: 27px
+  padding: 0px
+  margin: 0px
+  flex-basis: 100%
+  display: flex
+  flex-flow: row nowrap
+  list-style: none
+  .ui-tab
+    flex-basis: 50%
+    border-bottom: 1px solid $lightgrey
+    a
+      color: $lightgrey
+      text-decoration: none
+      text-transform: uppercase
+      font-weight: 900
+      font-size: 18px
+    &:nth-of-type(2)
+      a
+        margin-left: 10px
+  .ui-tabs-active
+    color: $black
+    border-bottom: 2px solid black
+    a
+      color: $black
+  @include media('<large')
+    height: 44px
+  @include media('<small')
+    display: none
+    .ui-tab
+
+      a
+        display: block
+        width: 260px
+        font-size: 16px
+      &:nth-of-type(2)
+        display: none
+
+.pc-info-tabs-mobile
+  display: none
+  @include media('<small')
+    padding: 0px
+    width: 90%
+    margin: auto
+    display: flex
+    flex-flow: column nowrap
+    li
+      list-style: none
+
+
+.pc-info-tabs-mobile-title
+  position: relative
+  border-bottom: 2px solid $black
+  padding: 5px 0px
+  margin: 8px 0px 10px 0px
+  a
+    color: $black
+    text-decoration: none
+    text-transform: uppercase
+    font-weight: 900
+    font-size: 18px
+  .pc-collapse-arrow
+    top: 50%
+
+.pc-sm-info-collapse-1
+  display: none
+  @include media('<large')
+  @include media('<small')
+    position: absolute
+    display: block
+    top: 17px
+    right: 27px
+    width: 0
+    height: 0
+    border-left: 3px solid transparent
+    border-right: 3px solid transparent
+    border-top: 5px solid #000000
+
+.pc-info-description, .pc-info-delivery
+  flex-basis: 50%
+  padding-top: 16px
+  p
+    margin-top: 22px
+  @include media('<large')
+    flex-basis: 100%
+  @include media('<small')
+    display: none !important
+
+
+
+.pc-special-offers
+  width: 100%
+  display: flex
+  flex-flow: row nowrap
+  font-family: "Gotham Pro"
+  @include media('<large')
+  @include media('<small')
+    flex-flow: column nowrap
+    margin-top: 50px
+
+
+.pc-so-gov,.pc-so-dealers
+  flex-basis: 50%
+  div
+    width: 510px
+    margin: 0px
+    margin-right: 122px
+    p
+      display: block
+      margin: 0px
+      margin-top: 48px
+      font-weight: 900
+      font-size: 36px
+      text-transform: uppercase
+      color: $black
+    a
+      width: 212px
+      margin: 0px
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 20px
+      color: $black
+      display: block
+      position: relative
+      margin-top: 43px
+      margin-bottom: 51px
+      letter-spacing: 4px
+      &::after
+        content: " "
+        position: absolute
+        top: -1px
+        right: -43px
+        display: block
+        width: 45px
+        height: 22px
+        background: url('../images/rd_arrow_yellow_short.svg') no-repeat
+        transition: 0.5s
+      &:hover
+        &::after
+          right: -60px
+  @include media('<large')
+    div
+      width: 290px
+      p
+        font-weight: 700
+        font-size: 30px
+  @include media('<small')
+    div
+      width: 240px
+      p
+        font-size: 24px
+
+
+.pc-so-gov
+  background-image: url("../images/pc_yellow_big.jpg")
+  div
+    margin-right: 113px
+    margin-left: auto
+    a
+      &::after
+        background: url('../images/rd_arrow_black_short.svg') no-repeat
+  @include media('<large')
+    div
+      margin-right: 10%
+  @include media('<small')
+    background-position: center
+    div
+      margin-left: 10%
+      margin-right: 0px
+
+.pc-so-dealers
+  background-image: url("../images/pc_black_big.jpg")
+  div
+    margin-left: 122px
+    margin-right: auto
+    p
+      color: $lyellow
+    a
+      color: $lyellow
+  @include media('<large')
+    div
+      margin-left: 10%
+  @include media('<small')
+    background-position: center
+    div
+      margin-left: 10%
+      margin-right: 0px

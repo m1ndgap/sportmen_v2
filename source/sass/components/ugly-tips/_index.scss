@@ -1,0 +1,57 @@
+.ugly-tips {
+  display: flex;
+  margin: 30px 0;
+
+  &-item {
+    width: calc(100% / 6);
+
+    &-image {
+      max-width: 100px;
+    }
+
+    &-title {
+      font-family: 'Gotham Pro';
+      font-weight: bold;
+      font-size: 16px;
+      color: #fff;
+      text-decoration: underline;
+      text-transform: uppercase;
+      margin-top: 15px;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 20px 20px 0 0;
+    border-color: #fff transparent transparent transparent;
+    border-style: solid;
+    position: relative;
+    bottom: -20px;
+  }
+
+  &-inner {
+    width: 300px;
+    padding: 20px 20px 20px 20px;
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    border-radius: 0;
+    color: #000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+  }
+}

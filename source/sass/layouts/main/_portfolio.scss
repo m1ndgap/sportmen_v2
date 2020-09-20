@@ -1,0 +1,81 @@
+.main-portfolio {
+  margin: 50px -20px 0;
+
+  &-item {
+    display: flex;
+    margin: 0 20px;
+
+    @include media('<large') {
+      display: block;
+    }
+  }
+
+  &-image {
+    width: 800px;
+    margin-right: 20px;
+
+    @include media('<large') {
+      width: 100%;
+      margin: 0;
+    }
+
+    &-element {
+      width: 100%;
+    }
+  }
+
+  &-text {
+    width: calc(100% - 820px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media('<large') {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &-title {
+    font-family: 'Gotham Pro';
+    font-weight: bold;
+    color: #000;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+
+    @include media('<large') {
+      font-size: 14px;
+      margin: 30px 0;
+    }
+  }
+
+  &-description {
+    font-family: 'Gotham Pro';
+    font-weight: 400;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+
+    @include media('<large') {
+      font-size: 14px;
+    }
+  }
+
+  &-arrows {
+    float: right;
+
+    @include media('<large') {
+      display: none;
+    }
+
+    & button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0 50px;
+      outline: none;
+    }
+  }
+}

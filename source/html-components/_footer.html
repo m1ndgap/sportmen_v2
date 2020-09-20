@@ -1,0 +1,141 @@
+
+</div>
+<footer class="footer">
+
+    <div class="footer-logo-buttons">
+        <div class="footer-logo">
+            <a href="/"></a>
+        </div>
+
+        <a class='yellow-button footer-order-call' href="/shops">
+            <span>Заказать звонок</span>
+        </a>
+        <a class='yellow-button footer-order-call' href="/shops">
+            <span>Где купить?</span>
+        </a>
+        <a class='yellow-button footer-order-call' href="/dealers">
+            <span>Стать дилером</span>
+        </a>
+
+        <a href="" class="footer-confidentiality">Политика <br> конфиденциальности</a>
+        <a href="https://vk.com/bogomazov_art" class="footer-designer-link">Разработка дизайна</a>
+
+    </div>
+    <nav class="footer-navigation">
+        <ul>
+            <li><a href="/sport_grounds">Готовые спортплощадки</a>
+                <ul>
+                    <li><a href="/platforms">Спортивные площадки</a></li>
+                    <li><a href="/gto_platforms">Площадки ВФСК</a></li>
+                    <li><a href="/mobiles">Мобильные комплексы</a></li>
+                </ul>
+            </li>
+            <li><span>О нас</span>
+                <ul>
+                    <li><a href="/about">О компании</a></li>
+                    <li><a href="/production">Производство</a></li>
+                    <li><a href="/reviews">Отзывы и благодарности</a></li>
+                    <li><a href="/delivery">Доставка</a></li>
+                </ul>
+            </li>
+            <li><a href="/trainers">Уличные тренажеры</a>
+                <ul>
+                    <li><a href="/ulichnye-brusya">Уличные брусья</a></li>
+                    <li><a href="/ulichnye-turniki">Уличные турники</a></li>
+                    <li><a href="/factory">Хомуты</a></li>
+                </ul>
+            </li>
+            <li><span>С кем работаем</span>
+                <ul>
+                    <li><a href="/government">Госзаказчики</a></li>
+                    <li><a href="/sponsorship">Спонсоры</a></li>
+                </ul>
+            </li>
+            <li class='no-sub first-no-sub'><a href="/paraworkout">Параворкаут</a></li>
+            <li class='no-sub'><a href="/premium">Премиум тренажеры</a></li>
+            <li class='no-sub'><a href="/rubber">Резиновое покрытие</a></li>
+            <li><span>FAQ</span>
+                <ul>
+                    <li><a href="/mounting">Монтаж оборудования</a></li>
+                    <li><a href="/faq">Вопросы и ответы</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="footer-second-block">
+        <div class="footer-downloads">
+            <a href="https://yadi.sk/i/3bh8u80t3YDSxU" target="_blank">скачать реквизиты</a>
+            <a href="https://yadi.sk/i/R597sdTt3T38qo" target="_blank">скачать презентацию</a>
+        </div>
+        <div class="footer-contact-info">
+            <p class="footer-times"><span>Работаем:</span>Пн-Пт, 09:00-18:00</p>
+            <p class="footer-address"><span>Адрес: </span> ООО "ВоркаутСпорт"<br>Москва, г. Московский, <br> 1-й микрорайон, вл. 5</p>
+        </div>
+        <div class="footer-phones">
+            <p>8 (800) 775-15-12</p>
+            <p>8 (495) 133-59-28</p>
+            <p>8 (915) 570-27-57</p>
+            <p class="footer-email"><a href="mailto:info@sportmen.ru">info@sportmen.ru</a></p>
+        </div>
+    </div>
+    </div>
+</footer>
+
+<div id="feedback-form" class="fancybox-content">
+    <div class="feedback-form-modal">
+        <noindex><p class="fancybox-title header">Оставьте свои данные <br>
+            <span class="fancybox-subtitle">и мы перезвоним вам</span></p></noindex>
+        <form class="form" action="{{contents.customer_messages.public_submission_url}}"  method="POST" data-goal="order" enctype="multipart/form-data" onsubmit="yaCounter32144179.reachGoal('mailform'); ga('send', 'event', 'conversions', 'mailform'); return true;">
+            {% csrf_param %}
+            <input type="text" name="content[name]" pattern="[A-Za-zА-Яа-яЁё]+$" required placeholder="Ваше имя">
+            <input type="text" name="content[phone]" placeholder="Номер телефона">
+
+            <input type="hidden" name="content[place]" >
+            <input type="submit" class="btn btn-lg" value="Отправить">
+            <div>
+                <input type="checkbox" checked id="feedback-conf" name="conf">
+                <label for="conf">Я соглашаюсь с политикой конфиденциальности </label>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="//code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="./js/fix.js" type="text/javascript"></script>
+<script src="./js/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="./js/magnific-popup.min.js" type="text/javascript"></script>
+<script src="./js/mock_cart_localstorage_array.js" type="text/javascript"></script>
+<script src="./js/jquery-ui-tabs.min.js" type="text/javascript"></script>
+<script src="./js/magnific-popup.min.js" type="text/javascript"></script>
+<script src="./js/product-card-page.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+<script>$(() => {
+    $('.fbt-ab-products').slick({
+        slidesToShow: 4,
+        infinite: false,
+        draggable: false,
+        arrows: true,
+        prevArrow: $('.fbt-ab-arrow-prev'),
+        nextArrow: $('.fbt-ab-arrow-next'),
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    draggable: true,
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+    $('.pc-pic-slider-mobile').slick({
+        arrows: false,
+        dots: true,
+        draggable: true
+    });
+})
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,13 @@
+.common-section {
+  position: relative;
+  background-color: #fff;
+  padding: 100px 0;
+
+  @include media('<small') {
+    padding: 50px 0;
+  }
+
+  &-title {
+    @include second-level-title(#000);
+  }
+}

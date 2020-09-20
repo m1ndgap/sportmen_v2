@@ -1,0 +1,221 @@
+.common-kits {
+  position: relative;
+
+  @include media ('<large') {
+    padding: 50px 0;
+  }
+
+  &-title {
+    padding-bottom: 90px;
+    max-width: 700px;
+
+    @include media('<small') {
+      padding-bottom: 15px;
+    }
+
+    @include media('>=small', '<large') {
+      padding-bottom: 40px;
+    }
+
+    &-element {
+      margin: 0;
+      font-family: 'Gotham Pro';
+      font-size: 48px;
+      color: #000;
+      line-height: 1.125;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include media('<small') {
+        font-size: 24px;
+      }
+
+      @include media('>=small', '<large') {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &-row {
+    padding: 60px 0;
+
+    @include media('<small') {
+      padding: 25px 0;
+    }
+
+    @include media('>=small', '<large') {
+      padding: 40px 0;
+    }
+  }
+
+  &-item {
+    &-image {
+      width: 100%;
+
+      @include media('<small') {
+        margin: 0 -20px 30px;
+        width: calc(100% + 40px);
+      }
+    }
+
+    &-title {
+      font-family: 'Gotham Pro';
+      font-size: 30px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 50px;
+
+      @include media('<small') {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      @include media('>=small', '<large') {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      &.left-divider {
+        padding-left: 90px;
+        text-align: left;
+
+        @include media('<small') {
+          padding-left: 0;
+        }
+
+        @include media('>=small', '<large') {
+          padding-left: 50px;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 3px;
+          background-color: #000;
+          left: 30px;
+          top: 50%;
+          margin-top: -3px;
+          position: absolute;
+
+          @include media('<small') {
+            display: none;
+          }
+
+          @include media('>=small', '<large') {
+            left: 0;
+          }
+        }
+      }
+
+      &.right-divider {
+        padding-right: 90px;
+        text-align: right;
+
+        @include media('<small') {
+          padding-right: 0;
+          text-align: left;
+        }
+
+        @include media('>=small', '<large') {
+          padding-right: 50px;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 3px;
+          background-color: #000;
+          right: 30px;
+          top: 50%;
+          margin-top: -3px;
+          position: absolute;
+
+          @include media('<small') {
+            display: none;
+          }
+
+          @include media('>=small', '<large') {
+            right: 0;
+          }
+        }
+      }
+    }
+  
+    &-text {
+      font-family: 'Gotham Pro';
+      font-size: 18px;
+      font-weight: 300;
+      color: #000;
+      line-height: 1.5;
+
+      @include media('<small') {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.7);
+        line-height: 1.5;
+      }
+
+      @include media('>=small', '<large') {
+        line-height: 1.2;
+      }
+
+      &.left-divider {
+        padding-left: 90px;
+        text-align: left;
+
+        @include media('<small') {
+          padding-left: 0;
+        }
+
+        @include media('>=small', '<large') {
+          padding-left: 50px;
+        }
+      }
+
+      &.right-divider {
+        padding-right: 90px;
+        text-align: right;
+
+        @include media('<small') {
+          padding-right: 0;
+          text-align: left;
+        }
+
+        @include media('>=small', '<large') {
+          padding-right: 50px;
+        }
+      }
+    }
+
+    &-gallery {
+      display: flex;
+      margin: -20px;
+
+      @include media('<small') {
+        margin: 0 -10px 30px;
+      }
+
+      @include media('>=small', '<medium') {
+        margin: -10px;
+        flex-wrap: wrap;
+      }
+
+      & > a {
+        display: block;
+        margin: 20px;
+
+        @include media('<medium') {
+          margin: 10px;
+          width: calc((100% - 40px) / 2);
+        }
+
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

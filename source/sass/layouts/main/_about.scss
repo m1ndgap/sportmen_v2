@@ -1,0 +1,55 @@
+.main-about {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 50px;
+
+  @include media('<large') {
+    flex-direction: column-reverse;
+  }
+
+  &-text {
+    width: calc(50% - 60px);
+    margin-right: 60px;
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 400;
+    opacity: 0.7;
+
+    @include media('<large') {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &-image {
+    width: 50%;
+
+    @include media('<large') {
+      width: 100%;
+    }
+
+    &-element {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+
+  &-link {
+    margin-top: 20px;
+
+    & > a {
+      font-family: 'Gotham Pro';
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+
+      @include media('<large') {
+        font-size: 14px;
+      }
+    }
+  }
+}

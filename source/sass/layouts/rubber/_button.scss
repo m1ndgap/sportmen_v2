@@ -1,0 +1,29 @@
+.test-button-container {
+  width: 400px;
+  padding: 20px;
+}
+
+.rubber-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 32px 35px;
+  font-family: 'Gotham Pro';
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #f7cf2d;
+  border: none;
+
+  @include media('<small') {
+    font-size: 14px;
+    padding: 25px;
+  }
+
+  &:after {
+    content: ' →';
+    float: right;
+  }
+}

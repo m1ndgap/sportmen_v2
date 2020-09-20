@@ -1,0 +1,1433 @@
+/* color vars
+
+$lyellow: #f7cf2d
+$dyellow: #d4b226
+$hyellow: #d9be1a
+$black: #000000
+
+
+/*-------------------------------------------
+/* REDESIGN GENERAL STYLES
+/*-------------------------------------------
+
+.hidden-rd
+  max-height: 0px
+  padding: 0px !important
+  margin: 0px !important
+  overflow: hidden
+
+.shown-rd
+  max-height: auto
+
+.dnone-rd
+  display: none
+
+.dnone-rd-off
+  display: block
+
+.yellow-button-static
+  position: relative
+  display: inline-block
+  padding: 10px 30px
+  background-color: $lyellow
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-family: 'Gotham Pro'
+  font-weight: 800
+
+
+.yellow-button
+  position: relative
+  display: inline-block
+  vertical-align: top
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  padding: 10px 30px
+  min-width: 200px
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  color: $black
+  font-family: Gotham Pro, sans-serif
+  letter-spacing: 2px
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    width: 100%
+    background-color: $lyellow
+    z-index: 0
+    transition-property: background, margin-left
+    transition-duration: 100ms, 300ms
+  &::before
+    top: 0
+    bottom: 49%
+    margin-left: -5px
+  &::after
+    bottom: 0
+    top: 49%
+    margin-left: 5px
+  span
+    position: relative
+    z-index: 100
+  &:hover, &:focus
+    &::before,
+    &::after
+      background-color: $dyellow
+      margin-left: 0px
+
+
+/*-------------------------------------------
+/* REDESIGN HEADER STYLES
+/*-------------------------------------------
+
+/* filler for the test page
+.test-test
+  height: 90vh
+  background-color: #9D9D9D
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+  .yellow-button
+    span
+      letter-spacing: 0px
+
+.main-menu-mobile
+  position: absolute
+
+.nav
+  font-family: Gotham Pro
+  font-weight: 300
+
+.nav-top-bar
+  background-color: $black
+  height: 47px
+  width: 100%
+
+.yellow-button
+  position: relative
+  display: inline-block
+  vertical-align: top
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  padding: 10px 30px
+  min-width: 200px
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  color: $black
+  font-family: Gotham Pro, sans-serif
+  font-weight: 800
+  letter-spacing: 2px
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    width: 100%
+    background-color: $lyellow
+    z-index: 0
+    transition-property: background, margin-left
+    transition-duration: 100ms, 300ms
+  &::before
+    top: 0
+    bottom: 49%
+    margin-left: -5px
+  &::after
+    bottom: 0
+    top: 49%
+    margin-left: 5px
+  span
+    position: relative
+    z-index: 100
+  &:hover, &:focus
+    &::before,
+    &::after
+      background-color: $dyellow
+      margin-left: 0px
+
+
+
+// .yellow-button
+//   display: block
+//   text-decoration: none
+//   position: relative
+//   &:hover
+//     div
+//       &:nth-of-type(1)
+//         right: 0px
+//       &:nth-of-type(2)
+//         left: 0px
+//   div
+//     position: relative
+//     height: 15px
+//     width: 196px
+//     background-color:  $lyellow
+//     transition: 0.5s
+//     &:nth-of-type(1)
+//       right: -5px
+//     &:nth-of-type(2)
+//       left: -5px
+//   span
+//     letter-spacing: 2px
+//     position: absolute
+//     width: 168px
+//     text-align: center
+//     top: 5px
+//     left: 15px
+//     color: $black
+//     text-transform: uppercase
+//     font-family: 'MyriadPro', sans-serif
+//     font-size: 14px
+//     font-weight: 700
+//     z-index: 10
+//
+// .yb-lg
+//   div
+//     width: 210px
+//     height: 20px
+//   span
+//     top: 10px
+//     left: 20px
+
+// @media only screen and (max-width: 1440px)
+//   .yellow-button
+//     div
+//       &:nth-of-type(2)
+//         left: -5px
+//         top: -1px
+
+.container-rd
+  margin: auto
+  max-width: 1920px
+  .wrapper-top-bar
+    width: 100%
+    height: 47px
+    display: flex
+    padding: 0px 35px 0px
+    justify-content: space-between
+    align-items: center
+    .we-work
+      font-size: 14px
+      color: white
+      span
+        font-family: 'Gotham Pro'
+        font-weight: 800
+    .best-price-btn
+      text-transform: uppercase
+      color:  $lyellow
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      border-bottom: 2px solid  $lyellow
+      img
+        margin-right: 5px
+        margin-bottom: 3px
+    .your-city
+      color: white
+      font-size: 14px
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      display: flex
+      span
+        text-decoration: underline
+        color: white
+        font-family: 'Gotham Pro'
+        font-weight: 300
+
+.nav
+  .container-rd-nav
+    background: white
+    display: flex
+    height: 100px
+    justify-content: space-between
+    align-items: center
+    position: relative
+    .main-submenu
+      padding: 0
+      margin: 0
+      list-style: none
+      white-space: nowrap
+      padding: 5px
+      z-index: 1
+      position: absolute
+      top: 100%
+      left: 0
+      background: white
+      padding: 10px 20px
+      //display: none
+      min-width: calc(100%)
+      a
+        font-size: 14px
+        color: $black
+        text-decoration: none !important
+    .main-menu
+      font-family: 'Gotham Pro'
+      font-weight: 300
+      .main-menu-list
+        margin-left: -40px
+        margin-bottom: 0px
+        list-style: none
+        display: flex
+        .main-menu-list__item
+          text-transform: uppercase
+          color: $black
+          font-family: 'Gotham Pro'
+          font-weight: 300
+
+
+        .with-submenu
+          > span
+            padding-right: 15px
+            cursor: default
+            &::after
+              content: ''
+              position: absolute
+              top: 5px
+              right: 0px
+              width: 0
+              height: 0
+              border-left: 4px solid transparent
+              border-right: 4px solid transparent
+              border-top: 6px solid $black
+          &:hover
+            .main-submenu
+              display: block
+          .main-submenu
+            padding: 0
+            margin: 0
+            list-style: none
+            white-space: nowrap
+            padding: 5px
+            z-index: 1
+            position: absolute
+            top: 100%
+            left: 0
+            background: white
+            padding: 20px 20px
+            //display: none
+            min-width: calc(100%)
+            a
+              font-size: 14px
+              color: $black
+              text-decoration: none !important
+          .main-menu-sub-2, .main-menu-sub-3, .main-menu-sub-4
+            li
+              list-style: none
+              .main-submenu2
+                justify-content: center
+                li
+                  width: 16%
+                  a
+                    svg
+                      border-right: 1px solid lightgrey
+                      width: 100%
+                      height: 90px
+                    span
+                      display: block
+                      max-width: 100%
+                      text-align: center
+                      word-spacing: 1337px
+                      white-space: normal
+                      line-height: 18px
+                      .invisible
+                        display: inline
+                        color: white
+                  &:last-child
+                    a
+                      svg
+                        border-right: none
+          .main-menu-sub-1
+            li
+              list-style: none
+            > li, ul
+              display: flex
+              flex-flow: row nowrap
+              justify-content: flex-start
+            > li
+              > a
+                font-size: 20px
+                font-family: 'Gotham Pro'
+                font-weight: 800
+                letter-spacing: -0.5px
+                display: block
+                width: 25%
+                margin-top: 4px
+            .main-submenu2
+              border-top: 1px solid lightgrey
+              width: 82%
+              margin-top: 20px
+              padding-top: 15px
+              li
+                flex-basis: 19%
+              a
+                display: flex
+                flex-flow: column nowrap
+                align-items: center
+                svg
+                  width: 100%
+                  height: 90px
+                &:hover
+                  svg
+                    .st1, .st0, .st2, .st3
+                      stroke: $hyellow
+                span
+                  display: block
+                  max-width: 100%
+                  text-align: center
+                  word-spacing: 1337px
+                  white-space: normal
+                  line-height: 18px
+              .premium-menu-item
+                margin-top: -15px
+                margin-bottom: -20px
+                background-color: $black
+                svg
+                  position: relative
+                  top: 0px
+                  .st0
+                    stroke: $lyellow
+                &:hover
+                  svg
+                    position: relative
+                    top: -3px
+                a
+                  margin-top: 15px
+                  color: $lyellow
+                  font-family: 'Gotham Pro'
+                  font-weight: 800
+
+          .main-menu-sub-2, .main-menu-sub-3, .main-menu-sub-4
+            .main-submenu2
+              display: flex
+              flex-flow: row nowrap
+              justify-content: center
+              a
+                display: flex
+                flex-flow: column nowrap
+                align-items: center
+                svg
+                  width: 150px
+                  height: 150px
+                &:hover
+                  svg
+                    .st1, .st0, .st2, .st3
+                      stroke: $hyellow
+
+
+
+        .main-menu-list__item + li
+          margin-left: 27px
+          a
+            color: $black
+      > a, span
+      	font-size: 14px
+      	font-weight: 300
+      	line-height: 14px
+      	position: relative
+      	text-decoration: none
+      	transition: .2s
+    .nav-phones
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      .nav-phones__link
+        color: $black
+    .order-call-btn
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      color: $black
+    .mm-basket
+      margin-right: 15px
+      position: relative
+      .basket-count
+        position: absolute
+        top: -11px
+        right: -2px
+        background-color:  $lyellow
+        color: $black
+        border-radius: 50%
+        font-size: 10px
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        text-align: center
+        height: 17px
+        width: 17px
+        padding-top: 2px
+
+
+@media only screen and (max-width: 1440px)
+  .nav
+    .container-rd-nav
+      padding: 0px 20px 0px
+      flex-flow: row wrap
+      height: auto
+      .main-menu
+        width: 90%
+        order: 5
+        margin-bottom: 15px
+        > ul
+          width: 100%
+          justify-content: space-around
+      .nav-phones
+        font-size: 20px
+      .mm-basket
+        margin-left: 20px
+        margin-bottom: 15px
+        order: 6
+      .main-menu
+        .main-menu-list
+          .with-submenu
+            .main-menu-sub-1
+              > li
+                > a
+                  max-width: 25%
+                  word-spacing: 1337px
+                  white-space: normal
+              .main-submenu2
+                padding-left: 0px
+                li
+                  flex-basis: 25%
+
+
+
+.nav-header-menu-fixed
+  position: fixed
+  width: 100%
+  z-index: 1000
+  transition: 0.5s
+
+.header-logo, .footer-logo
+  position: relative
+  a
+    &:nth-child(1)
+      transition: 0.3s
+      display: block
+      height: 100px
+      width: 240px
+      background-image: url('../images/rd_logo_1.svg')
+      background-repeat: no-repeat
+
+.footer-logo
+  a
+    margin: 0px
+
+.header-logo-short
+  position: relative
+  a
+    &:nth-child(1)
+      transition: 0.3s
+      display: block
+      height: 100px
+      width: 240px
+      background-image: url('../images/rd_logo_2.svg')
+      background-repeat: no-repeat
+
+
+
+/*----------------------------------
+/* HEADER CART MENU
+
+
+/* temporary style
+.wrapper
+  background-color: #9D9D9D
+  padding-top: 150px
+
+.container-rd-nav
+  .hide-sm
+    display: block
+  .hide-lg
+    display: none
+  #basket__hover
+    transition: 0.3s
+    position: absolute
+    right: 0px
+    top: 100%
+    background-color: white
+    display: flex
+    flex-flow: column nowrap
+    .basket__item
+      position: relative
+      width: 600px
+      height: 85px
+      margin: 15px 25px
+      display: flex
+      flex-flow: column wrap
+      img
+        width: 115px
+        display: block
+      .basket__item-text
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-between
+        width: 70%
+        height: calc(100%)
+        p
+          margin-top: 5px
+          display: block
+          text-transform: uppercase
+          font-family: 'Gotham Pro'
+          font-weight: 800
+          &:nth-child(1)
+            padding-right: 20%
+            margin-bottom: 0px
+          &:nth-child(2)
+            font-family: 'Gotham Pro'
+            font-weight: 300
+            margin-bottom: 5px
+      .basket__item-close
+        position: absolute
+        height: 15px
+        width: 15px
+        right: 10px
+        top: 10px
+        background: url('../images/rd_close_cross_yellow.svg') no-repeat
+        cursor: pointer
+    .basket__buttons
+      display: flex
+      flex-flow: row nowrap
+      margin: 0px
+      margin-top: 100px
+      width: 100%
+      a, p
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 60px
+        margin-bottom: 0px
+        width: 50%
+      p
+        font-size: 30px
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        margin-right: auto
+        .basket__item-price
+          display: block
+      .basket__keep-shopping-btn
+        text-align: center
+        cursor: pointer
+        margin-left: auto
+        color: $black
+
+
+/*----------------------------------
+/* HEADER MOBILE <960
+
+@media only screen and (max-width: 960px)
+  .wrapper
+    padding-top: 40px
+
+  .nav-header-menu-fixed
+    .wrapper-top-bar
+      justify-content: center
+    .hide-sm
+      display: none !important
+    .hide-lg
+      display: block
+    .container-rd-nav
+      min-height: 50px
+      .header-mobile-menu-icon
+        position: relative
+        margin: 20px
+        margin-left: 3%
+        &::before
+          content: ""
+          height: 17px
+          width: 24px
+          position: absolute
+          left: -11px
+          bottom: -8px
+          background: linear-gradient(to bottom, black, black 20%, white 20%, white 40%, black 40%, black 60%, white 60%, white 80%, black 80%, black 100%)
+      .header-logo-mobile-phone
+        width: 100%
+        position: absolute
+        z-index: 1001
+        text-align: center
+        font-size: 15px
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        color: $black
+      .header-logo
+        a
+          &:nth-child(1)
+            background-image: url('../images/rd_logo_2.svg')
+        .header-logo-mobile-phone
+          bottom: 10px
+      .header-logo-short
+        min-width: 200px
+        a
+          &:nth-child(1)
+            display: none
+        .header-logo-mobile-phone
+          bottom: -10px
+      .mm-basket
+        margin: 0px
+        margin-right: 3%
+      #basket__hover
+        width: 100%
+        .basket__item
+          margin: 15px 10px
+          width: 90%
+          .basket__item-text
+            margin-left: 10px
+            line-height: 14px
+          .basket__item-close
+            right: -2px
+            top: 5px
+        .basket__buttons
+          margin-top: 20px
+          flex-flow: column nowrap
+          a, p
+            width: 100%
+
+
+@media only screen and (max-width: 350px)
+  .nav-header-menu-fixed
+    .container-rd-nav
+      .header-logo
+        a
+          &:nth-child(1)
+            width: 200px
+      #basket__hover
+        .basket__buttons
+          p
+            font-size: 24px
+
+/*----------------------------------
+/* HEADER MOBILE MENU
+
+@media only screen and (max-width: 960px)
+  .main-menu-mobile
+    position: absolute
+    top: 100%
+    left: 0px
+    width: 100%
+    background: white
+    font-family: 'Gotham Pro'
+    font-weight: 300
+    .main-menu-mobile-wrapper
+      width: 90%
+      margin: 15px auto
+      .main-menu-mobile-list
+        width: 100%
+        padding-left: 0px
+        margin-bottom: 0px
+        list-style: none
+        display: flex
+        flex-flow: column nowrap
+        .main-menu-mobile-list__item
+          margin-top: 10px
+          padding-bottom: 10px
+          width: 100%
+          text-transform: uppercase
+          color: $black
+          font-family: 'Gotham Pro'
+          font-weight: 300
+          border-bottom: 1px solid $black
+          .main-submenu-mobile
+            padding: 0
+            margin: 0
+            list-style: none
+            white-space: nowrap
+            padding: 5px
+            z-index: 1
+            background: white
+            padding: 10px 20px
+            // display: none
+            min-width: calc(100%)
+            > li
+              > a
+                font-family: 'Gotham Pro'
+                font-weight: 800
+                font-size: 14px
+                color: $black
+                text-decoration: none !important
+              a
+                color: $black
+                text-decoration: none !important
+            li
+              margin-top: 7px
+            a
+              &:focus
+                font-family: 'Gotham Pro'
+                font-weight: 800
+                display: block
+                width: 100%
+                outline: none
+                background-color: $black
+                color: $lyellow
+                padding: 5px 10px
+            .main-submenu-mobile2
+              list-style: none
+              padding-left: 20px
+            .mobile-menu-premium
+              font-family: 'Gotham Pro'
+              font-weight: 800
+              display: block
+              width: 110%
+              outline: none
+              background-color: $black
+              padding: 5px 10px
+              text-align: center
+              margin-left: -5%
+              max-width: 400px
+              a
+                color: $lyellow
+
+        .with-submenu-mobile
+          > span
+            display: block
+            padding-right: 15px
+            cursor: default
+            width: 100%
+            &::after
+              content: ''
+              position: absolute
+              top: 5px
+              right: 0px
+              width: 0
+              height: 0
+              border-left: 4px solid transparent
+              border-right: 4px solid transparent
+              border-top: 6px solid $black
+          //&:hover
+            .main-submenu-mobile
+              display: block
+
+        .main-menu-mobile-list__item + li
+          a
+            font-size: 16px
+            color: $black
+      > a, span
+      	font-size: 16px
+      	font-weight: 300
+      	position: relative
+      	text-decoration: none
+      	transition: .2s
+      .main-menu-mobile__hours
+        margin: 15px auto
+        width: 100%
+        p
+          font-size: 20px
+          font-family: 'Gotham Pro'
+          font-weight: 800
+        span
+          font-size: 18px
+      .main-menu-mobile__phones
+        width: 100%
+        display: flex
+        flex-flow: column nowrap
+        a
+          text-align: center
+          display: block
+          width: 100%
+          font-size: 30px
+          font-family: 'Gotham Pro'
+          font-weight: 800
+          color: $black
+      .yellow-button
+        display: block
+        padding: 15px 30px
+        margin: 15px auto
+        width: 100%
+        max-width: 300px
+
+
+@media only screen and (max-width: 500px)
+  .main-menu-mobile
+    width: 100%
+    .main-menu-mobile-wrapper
+      width: 90%
+      .main-menu-mobile-list
+        padding-left: 0px
+      .main-menu-mobile__phones
+        a
+          font-size: 8.4vw
+
+
+@media only screen and (max-width: 350px)
+  .main-menu-mobile
+    width: 100%
+    .main-menu-mobile-wrapper
+      width: 90%
+      margin: 10px auto
+      .main-menu-mobile__hours
+        margin: 10px auto
+      .main-menu-mobile-list
+        padding-left: 0px
+      .yellow-button
+        margin: 10px auto
+
+
+
+/*----------------------------------
+/* FOOTER
+/*----------------------------------
+
+footer
+  margin-bottom: -1px
+  background-color: $black
+  .container-rd
+    display: flex
+    flex-flow: column wrap
+    height: 431px
+    color: white
+    .hide-xl
+      display: none
+    .hide-xs
+      display: block
+    .footer-logo-phones
+      width: 27%
+      max-width: 300px
+      background-image: url('../images/rd_footer-logo-bg.svg')
+      background-repeat: no-repeat
+      .footer-phones
+        color: white
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        font-size: 24px
+        line-height: 29px
+        position: relative
+        margin-top: 45px
+        margin-left: 20px
+        p
+          display: block
+          margin-left: 20px
+      a
+        margin: 0px
+      .yellow-button
+        margin: 40px 0 0 30px
+    nav
+      width: 60%
+      margin-top: 25px
+      > ul
+        width: 100%
+        list-style-type: none
+        height: 350px
+        flex-flow: column wrap
+        display: flex
+        list-style-type: none
+        padding-left: 0px
+        > li
+          ul
+            padding-left: 0px
+            list-style-type: none
+            li
+              a
+                font-family: 'Gotham Pro'
+                font-weight: 300
+                font-size: 14px
+                color: white
+          > a, span
+            display: block
+            font-family: 'Gotham Pro'
+            font-weight: 800
+            font-size: 16px
+            color: white
+            margin: 10px 0px 20px
+            text-transform: uppercase
+            text-decoration: underline
+    .footer-links
+      display: flex
+      flex-flow: column nowrap
+      .footer-links-site
+        width: 230px
+        padding-top: 20px
+        display: flex
+        flex-flow: column nowrap
+        a
+          margin-bottom: 20px
+    .footer-downloads
+      display: flex
+      a
+        display: block
+        font-family: 'Gotham Pro'
+        font-weight: 800
+        color:  $lyellow
+        text-transform: uppercase
+        border-bottom: 1px solid  $lyellow
+        margin-right: 70px
+        position: relative
+        &:nth-child(2)
+          margin-left: 30px
+        &::after
+          content: " "
+          position: absolute
+          top: 7px
+          right: -55px
+          display: block
+          width: 40px
+          height: 15px
+          background: url('../images/rd_arrow.svg') no-repeat
+          transition: 0.5s
+        &:hover
+          &::after
+            right: -60px
+    .footer-contact-info
+      display: flex
+      flex-flow: column nowrap
+      font-family: 'Gotham Pro'
+      font-weight: 300
+      p, span
+        display: block
+      span
+        font-family: 'Gotham Pro'
+        font-weight: 800
+      .footer-email
+        a
+          font-family: 'Gotham Pro'
+          font-weight: 800
+          font-size: 20px
+          color: white
+          text-transform: lowercase
+          text-decoration: underline
+
+@media only screen and (max-width: 1440px)
+  footer
+    .container-rd
+      .hide-lg
+        display: none
+      .hide-xl
+        display: block
+
+  .footer
+    max-width: 1440px
+    .container-rd
+      height: 560px
+      .footer-logo-phones
+        margin-right: 2%
+        .footer-phones
+          text-align: center
+        .yellow-button
+          display: block
+          margin-top: 20px
+      nav
+        width: 70%
+        > ul
+          height: 330px
+          > li
+            width: 30%
+      .footer-contact-info
+        width: 70%
+        height: 100px
+        margin-top: 45px
+        flex-flow: column wrap
+        p
+          display: block
+          flex-basis: 25%
+
+@media only screen and (max-width: 1080px)
+
+  .footer
+    max-width: 1080px
+    .container-rd
+      height: 750px
+      .footer-logo-phones
+        min-width: 250px
+        margin-right: 10%
+        .footer-phones
+          margin-left: 0px
+          p
+            margin-left: 5px
+        .yellow-button
+          display: block
+          margin-top: 20px
+          margin-left: 10px
+      nav
+        width: 60%
+        > ul
+          height: 390px
+          > li
+            width: 50%
+      .footer-downloads
+        width: 60%
+      .footer-contact-info
+        width: 60%
+        height: 150px
+        margin-top: 45px
+        flex-flow: row wrap
+        p
+          display: block
+          flex-basis: 50%
+
+@media only screen and (max-width: 960px)
+  .footer
+    .container-rd
+      .footer-logo-phones
+        margin-right: 3%
+      .footer-downloads
+        width: 30%
+        flex-flow: row wrap
+        a
+          margin-right: auto
+          &:nth-child(2)
+            margin-top: 20px
+            margin-left: 0px
+
+@media only screen and (max-width: 768px)
+  .footer
+    .container-rd
+      height: 1080px
+      nav
+        width: 40%
+        align-self: flex-end
+        margin-right: 5%
+        > ul
+          height: 734px
+          > li
+            width: 100%
+      .footer-logo-phones
+        margin-right: 5%
+      .footer-downloads
+        align-self: flex-end
+        margin-right: 5%
+        width: 40%
+      .footer-contact-info
+        align-self: flex-end
+        margin-right: 5%
+        width: 40%
+        margin-top: 45px
+        flex-flow: column nowrap
+        height: auto
+        p
+          display: block
+          flex-basis: 100%
+
+@media only screen and (max-width: 580px)
+
+
+  .footer
+    .container-rd
+      height: 1500px
+      align-items: center
+      .hide-xs
+        display: none
+      .footer-logo-phones
+        order: 5
+        background: none
+        width: 100%
+        margin-right: 0px
+        p
+          margin-top: 25px
+          margin-left: 0px
+          font-size: 30px
+        .yellow-button
+          margin-top: 35px
+      nav
+        margin-left: 15px
+        align-self: center
+        width: 60%
+        min-width: 300px
+        margin-right: 0px
+        > ul
+          height: 734px
+          > li
+            width: 100%
+      .footer-downloads
+        margin-left: 15px
+        align-self: center
+        margin-right: 0px
+        width: 60%
+        min-width: 300px
+      .footer-contact-info
+        margin-left: 15px
+        align-self: center
+        margin-right: 0px
+        width: 60%
+        min-width: 300px
+        height: auto
+
+
+/*-------------------------------------------
+/* FANCYBOX STYLES
+/*-------------------------------------------
+
+.fancybox-wrap
+    top: 50% !important
+    left: 50% !important
+    transform: translate(-50%, -50%) !important
+
+.fancybox-opened
+    z-index: 8030
+
+
+.fancybox-overlay
+    position: absolute
+    top: 0
+    left: 0
+    overflow: hidden
+    display: none
+    z-index: 8010
+    background: url(../images/popup-pattern.png) left top repeat
+
+.fancybox-overlay-fixed
+    position: fixed
+    bottom: 0
+    right: 0
+
+.fancybox-content
+  display: none
+
+.fancybox-test
+  display: block
+
+.fancybox-skin
+
+
+.fancybox-close
+    position: absolute
+    top: 7%
+    right: 4%
+    width: 39px
+    height: 36px
+    cursor: pointer
+    z-index: 8040
+    background-size: 36px 36px
+    font-size: 40px
+    color: $black
+    background: url('../images/rd_close_cross.svg') no-repeat
+    background-position: center
+
+.feedback-form-modal
+  display: flex
+  flex-flow: column nowrap
+  min-height: 80vh
+  width: 1440px
+  margin: auto
+  padding-left: 136px
+  font-family: 'Gotham Pro'
+  font-weight: 800
+  background-color:  $lyellow
+  color: $black
+  noindex
+    margin-top: 26.5vh
+    .fancybox-title, span
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      text-transform: uppercase
+    .fancybox-title
+      letter-spacing: 0.5px
+      font-size: 58px
+    span
+      letter-spacing: 0px
+      margin-top: 18px
+      display: block
+      font-size: 20px
+
+  form
+    margin-top: 7.4vh
+    display: flex
+    flex-flow: row wrap
+    color: white
+    input
+      border-radius: 0px
+      height: 82px
+    input[type='text']
+      width: 436px
+      color: white
+      background-color: $black
+      border: none
+      padding-left: 31px
+      font-size: 26px
+      &:nth-child(3)
+        margin-left: 1px
+      &::placeholder
+        color: white
+    input[type='submit']
+      position: relative
+      width: 306px
+      background-color: rgba(256, 256, 256, 0)
+      border: 1px solid $black
+      color: $black
+      font-size: 22px
+      text-transform: uppercase
+      letter-spacing: 2px
+      text-align: left
+      padding-left: 46px
+      background: url('../images/rd_arrow_black.svg') no-repeat
+      background-size: 12%
+      background-position: right 16% top 50%
+      transition: 0.5s
+      &:hover
+        background-position: right 10% top 50%
+    > div
+      margin-top: 13px
+      margin-left: 3px
+      input[type='checkbox']
+        height: 17px
+      input[type='checkbox'] + label
+        font-size: 16px
+        font-family: 'Gotham Pro'
+        font-weight: 300
+        color: $black
+
+@media only screen and (max-width: 1440px)
+
+  .fancybox-close
+    top: 5%
+    right: 13%
+    background-size: 20px
+
+
+  .feedback-form-modal
+    min-height: 90vh
+    width: 84%
+    padding: 0px 10% 0px
+
+    noindex
+      margin-top: 7.5vh
+      .fancybox-title
+        letter-spacing: 0.5px
+        font-size: 43px
+      span
+        letter-spacing: 0px
+        margin-top: 18px
+        display: block
+        font-size: 20px
+
+    form
+      margin-top: 3.4vh
+      flex-flow: column nowrap
+      input[type='text']
+        width: 100%
+        &:nth-child(3)
+          margin-top: 1px
+          margin-left: 0px
+        &::placeholder
+          color: white
+      input[type='submit']
+        width: 100%
+        background-size: 6%
+        &:focus
+          background-position: right 10% top 50%
+      > div
+        input[type='checkbox']
+          height: 17px
+
+@media only screen and (max-width: 960px)
+
+    .fancybox-close
+      top: 5%
+      right: 7%
+
+    .feedback-form-modal
+      min-height: 90vh
+      width: 98%
+      padding: 0px 3% 0px
+
+      noindex
+        margin-top: 15.5vh
+        .fancybox-title
+          letter-spacing: 0.5px
+          font-size: 6em
+          line-height: 1em
+        span
+          letter-spacing: 0px
+          margin-top: 10px
+          display: block
+          font-size: 0.3em
+      form
+        margin-top: 7vh
+        flex-flow: column nowrap
+        input
+          height: 82px
+        input[type='text']
+          width: 100%
+          &:nth-child(3)
+            margin-top: 1px
+            margin-left: 0px
+          &::placeholder
+            color: white
+        input[type='submit']
+          width: 100%
+          background-size: 6%
+          &:focus
+            background-position: right 10% top 50%
+        > div
+          input[type='checkbox']
+            height: 17px
+          input[type='checkbox'] + label
+            font-size: 20px
+
+@media only screen and (max-width: 768px)
+
+    .footer
+      overflow: hidden
+
+    .fancybox-close
+      top: 5%
+      right: 7%
+
+    .feedback-form-modal
+      min-height: 90vh
+      width: 100%
+      padding: 0px 3% 0px
+
+      noindex
+        margin-top: 9.5vh
+        .fancybox-title
+          letter-spacing: 0.5px
+          font-size: 6em
+          line-height: 1em
+        span
+          letter-spacing: 0px
+          margin-top: 10px
+          display: block
+          font-size: 0.3em
+      form
+        margin-top: 3vh
+        flex-flow: column nowrap
+        input
+          height: 82px
+        input[type='text']
+          width: 100%
+          &:nth-child(3)
+            margin-top: 1px
+            margin-left: 0px
+          &::placeholder
+            color: white
+        input[type='submit']
+          width: 100%
+          background-size: 6%
+          &:focus
+            background-position: right 10% top 50%
+        > div
+          input[type='checkbox']
+            height: 17px
+          input[type='checkbox'] + label
+            font-size: 20px
+
+@media only screen and (max-width: 500px)
+  .fancybox-close
+    top: 4%
+    right: 4%
+    background-size: 20px
+
+  .feedback-form-modal
+    min-height: 420px
+    width: 100%
+    noindex
+      margin-top: 6.5vh
+      .fancybox-title
+        font-size: 38px
+
+      span
+        margin-top: 0px
+        font-size: 0.3em
+    form
+      margin-top: 0px
+      input
+        height: 50px
+      input[type='text']
+        font-size: 14px
+      input[type='submit']
+        font-size: 16px
+        padding-left: 31px
+      > div
+        input[type='checkbox']
+          height: 17px
+        input[type='checkbox'] + label
+          font-size: 15px

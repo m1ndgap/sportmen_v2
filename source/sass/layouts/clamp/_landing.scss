@@ -1,0 +1,50 @@
+.clamp-landing {
+  &-main {
+    background-color: #c00d00;
+    background-image: url('../images/clamp/background-lg.jpg');
+
+    @include media('>=small', '<large') {
+      background-image: url('../images/clamp/background-md.jpg');
+    }
+  
+    @include media('<small') {
+      background-image: none;
+    }
+  }
+
+  &-image {
+    &-sm {
+      display: none;
+      max-width: 150px;
+      margin: 0 auto;
+      padding: 40px 0 20px;
+
+      @include media('<small') {
+        display: block;
+      }
+
+      &-element {
+        width: 100%;
+      }
+    }
+  }
+
+  &-text {
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: 800px;
+    padding-top: 100px;
+
+    @include media('<small') {
+      padding: 0;
+    }
+
+    @include media('>=small', '<large') {
+      max-width: 500px;
+      padding-top: 50px;
+    }
+  }
+}

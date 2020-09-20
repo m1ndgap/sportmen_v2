@@ -1,0 +1,79 @@
+.premium-catalog {
+  background-color: #fff;
+  padding: 200px 0 100px;
+  position: relative;
+  overflow: hidden;
+
+  @include media('<small') {
+    padding: 50px 0;
+  }
+
+  @include media('>=small', '<large') {
+    padding: 90px 0 50px;
+  }
+
+  &-title {
+    padding-bottom: 90px;
+    max-width: 700px;
+
+    @include media('<small') {
+      padding-bottom: 20px;
+    }
+
+    &-element {
+      margin: 0;
+      font-family: 'Gotham Pro';
+      font-size: 48px;
+      color: #000;
+      line-height: 1.125;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include media('<small') {
+        font-size: 24px;
+      }
+
+      @include media('>=small', '<large') {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media('<small') {
+      margin: 0 -25px;
+    }
+
+    & > div {
+      border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+      border-left: 0.5px solid rgba(0, 0, 0, 0.1);
+
+      @include media('<small') {
+        border: none;
+        margin: 10px 5px;
+      }
+
+      @include media('>=small', '<large') {
+        border: none;
+
+        &:nth-child(7),
+        &:nth-child(8) {
+          display: none;
+        }
+      }
+
+      &:nth-child(4),
+      &:nth-child(8) {
+        border-right: none;
+      }
+
+      &:nth-child(1),
+      &:nth-child(5) {
+        border-left: none;
+      }
+    }
+  }
+}

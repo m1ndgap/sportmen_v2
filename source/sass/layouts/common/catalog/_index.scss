@@ -1,0 +1,133 @@
+.common-catalog {
+  &-sale {
+    width: 100%;
+    font-family: 'Gotham Pro';
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff003c;
+    padding: 23px 30px;
+    margin: 30px 0 10px;
+    box-shadow: 0px 27px 35px 0px rgba(255, 0, 60, 0.31);
+
+    @include media('<large') {
+      margin: 20px -20px;
+      width: calc(100% + 40px);
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    @include media('<small') {
+      margin: 0 -25px;
+    }
+
+    & > div {
+      border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+      border-left: 0.5px solid rgba(0, 0, 0, 0.1);
+
+      @include media('<small') {
+        border: none;
+        margin: 10px 5px;
+      }
+
+      @include media('>=small', '<large') {
+        border: none;
+
+        &:nth-child(7),
+        &:nth-child(8) {
+          display: none;
+        }
+      }
+
+      &:nth-child(4),
+      &:nth-child(8) {
+        border-right: none;
+      }
+
+      &:nth-child(1),
+      &:nth-child(5) {
+        border-left: none;
+      }
+    }
+  }
+
+  &-pagination {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-button {
+      background-color: transparent;
+      font-family: 'Gotham Pro';
+      font-size: 24px;
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      width: 50px;
+      padding: 7px 0 3px;
+
+      &.ccpb-num {
+        margin: 0 30px;
+      }
+
+      &.ccpb-active {
+        background-color: #f7cf2d;
+      }
+
+      &.ccpb-prev,
+      &.ccpb-next {
+        background-color: #f7cf2d;
+        width: auto;
+        padding: 7px 14px 3px;
+      }
+
+      &.ccpb-prev {
+        .ccp-string {
+          margin-left: 20px;
+
+          @include media('<large') {
+            display: none;
+          }
+        }
+      }
+
+      &.ccpb-next {
+        .ccp-string {
+          margin-right: 20px;
+
+          @include media('<large') {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-list {
+      @include media('<large') {
+        display: none;
+      }
+    }
+
+    &-counter {
+      display: none;
+      font-family: 'Gotham Pro';
+      color: #000;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      @include media('<large') {
+        display: block;
+      }
+    }
+  }
+}

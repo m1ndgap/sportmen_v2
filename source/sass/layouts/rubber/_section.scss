@@ -1,0 +1,447 @@
+.rubber-section {
+  &-sandwich {
+    margin-top: 50px;
+
+    @include media('>=small', '<large') {
+      margin-top: 80px;
+    }
+
+    @include media('<small') {
+      margin-top: 40px;
+    }
+
+    &-image-lg {
+      width: 100%;
+      display: block;
+
+      @include media('<large') {
+        display: none;
+      }
+    }
+
+    &-image-md {
+      width: 100%;
+      display: none;
+
+      @include media('>=small', '<large') {
+        display: block;
+      }
+    }
+
+    &-image-sm {
+      width: 100%;
+      display: none;
+
+      @include media('<small') {
+        display: block;
+      }
+    }
+
+    &-text-sm {
+      display: none;
+      margin: 50px 0 -20px;
+
+      @include media('<small') {
+        display: block;
+      }
+
+      &-item {
+        margin: 20px 0;
+
+        &-title {
+          position: relative;
+          padding-left: 50px;
+          font-family: 'Gotham Pro';
+          font-size: 14px;
+          font-weight: 800;
+          color: #000;
+          text-transform: uppercase;
+
+          &:before {
+            content: attr(data-count);
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          &:after {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            top: 8px;
+            left: 16px;
+          }
+        }
+
+        &-description {
+          padding-left: 50px;
+          margin-top: 10px;
+          font-family: 'Gotham Pro';
+          font-size: 14px;
+          font-weight: 300;
+          color: #000;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    &-button {
+      width: 320px;
+      margin-top: 10px;
+
+      @include media('>=small', '<large') {
+        width: 240px;
+        margin-top: 40px;
+      }
+  
+      @include media('<small') {
+        width: 100%;
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &-description {
+    width: 100%;
+    margin: -50px -30px;
+
+    @include media('>=small', '<large') {
+      margin: -10px -10px -40px;
+    }
+
+    @include media('<small') {
+      margin: -20px 0 -50px;
+    }
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 50px 0;
+
+      @include media('>=small', '<large') {
+        margin: 40px 0;
+      }
+
+      @include media('<small') {
+        display: block;
+      }
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &-col {
+      width: 50%;
+      padding: 0 30px;
+
+      @include media('>=small', '<large') {
+        padding: 0 10px;
+      }
+
+      @include media('<small') {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    &-image {
+      & > img {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      font-family: 'Gotham Pro';
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 470px;
+
+      @include media('>=small', '<large') {
+        line-height: 1.2;
+        max-width: none;
+      }
+
+      @include media('<small') {
+        margin-top: 20px;
+      }
+
+      &.mod-padding {
+        padding-top: 70px;
+
+        @include media('<large') {
+          padding-top: 0;
+        }
+      }
+    }
+
+    &-button {
+      margin-top: 20px;
+
+      @include media('<large') {
+        display: none;
+      }
+    }
+  }
+
+  &-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0 30px;
+
+    @include media('>=small', '<large') {
+      padding: 0 30px;
+    }
+
+    &-item {
+      width: calc(100% / 3);
+      margin: 20px 0;
+
+      @include media('>=small', '<large') {
+        width: calc(100% / 2);
+      }
+
+      @include media('<small') {
+        width: 100%;
+      }
+
+      &-pic {
+        height: 180px;
+        width: 180px;
+
+        @include media('>=small', '<large') {
+          height: 128px;
+          width: 128px;
+        }
+
+        @include media('<small') {
+          margin: 0 auto;
+        }
+
+        & > img {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        font-family: 'Gotham Pro';
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+        text-transform: uppercase;
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 10px;
+
+        @include media('>=small', '<large') {
+          font-size: 14px;
+        }
+
+        @include media('<small') {
+          font-size: 14px;
+          text-align: center;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 3px;
+          background-color: #000;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+
+      &-text {
+        font-family: 'Gotham Pro';
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.7);
+        max-width: 250px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &-comparison {
+    @include media('>=small', '<large') {
+      margin: 150px 0 0;
+    }
+
+    &-block {
+      display: flex;
+      margin: 100px 0 0;
+
+      @include media('<small') {
+        display: block;
+        margin: 50px 0 0;
+      }
+    }
+
+    &-image {
+      width: 50%;
+
+      @include media('>=small', '<large') {
+        padding-right: 10px;
+      }
+
+      @include media('<small') {
+        width: 100%;
+      }
+
+      &-lg {
+        display: block;
+
+        @include media('<small') {
+          display: none;
+        }
+
+        &.ok {
+          margin-top: 120px;
+
+          @include media('<large') {
+            margin: 0;
+          }
+        }
+      }
+
+      &-sm {
+        display: none;
+        width: 100%;
+
+        @include media('<small') {
+          display: block;
+        }
+      }
+
+      & > img {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+
+    &-content {
+      width: 50%;
+
+      @include media('>=small', '<large') {
+        padding-left: 10px;
+      }
+
+      @include media('<small') {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      font-family: 'Gotham Pro';
+      font-size: 48px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      padding-bottom: 80px;
+
+      @include media('>=small', '<large') {
+        font-size: 40px;
+        padding-bottom: 40px;
+      }
+
+      @include media('<small') {
+        font-size: 24px;
+        padding-bottom: 50px;
+      }
+    }
+
+    &-list {
+      list-style-type: none;
+      padding: 0;
+      margin: -50px 0;
+
+      @include media('>=small', '<large') {
+        margin: -40px 0;
+      }
+
+      @include media('<small') {
+        margin: 0 0 -30px;
+      }
+
+      & > li {
+        font-family: 'Gotham Pro';
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+        text-transform: uppercase;
+        margin: 50px 0;
+        padding-left: 55px;
+        position: relative;
+
+        @include media('>=small', '<large') {
+          font-size: 14px;
+          margin: 40px 0;
+        }
+
+        @include media('<small') {
+          font-size: 14px;
+          margin: 30px 0;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 26px;
+          height: 20px;
+          position: absolute;
+          top: 3px;
+          left: 0;
+        }
+      }
+
+      &.cross {
+        & > li {
+          &:before {
+            background-image: url('../images/rubber/cross-icon.png');
+          }
+        }
+      }
+
+      &.check {
+        & > li {
+          &:before {
+            background-image: url('../images/rubber/check-icon.png');
+          }
+        }
+      }
+    }
+
+    &-button {
+      &-lg {
+        display: block;
+        padding-top: 70px;
+
+        @include media('>=small', '<large') {
+          display: none;
+        }
+
+        @include media('<small') {
+          padding-top: 50px;
+        }
+      }
+
+      &-md {
+        display: none;
+
+        @include media('>=small', '<large') {
+          display: block;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}

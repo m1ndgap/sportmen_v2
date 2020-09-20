@@ -1,0 +1,38 @@
+.breadcrumbs {
+  padding: 20px 0;
+
+  @include media('<small') {
+    display: none;
+  }
+
+  &-hidden {
+    visibility: hidden;
+  }
+
+  &-item {
+    font: 14px/20px 'Gotham Pro';
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+
+    & > a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    & + .breadcrumbs-item:before {
+      content: '→';
+      margin: 0 4px;
+    }
+  }
+  &.breadcrumbs-black {
+    & .breadcrumbs-item {
+      color: $black;
+
+      & > a {
+        color: $black;
+      }
+
+    }
+  }
+}

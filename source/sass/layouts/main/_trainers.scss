@@ -1,0 +1,112 @@
+.main-trainers {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 50px;
+
+  @include media('<large') {
+    flex-direction: column-reverse;
+  }
+
+  &-text {
+    width: calc(50% - 60px);
+    margin-right: 60px;
+    font-family: 'Gotham Pro';
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 400;
+
+    @include media('<large') {
+      width: 100%;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    & > h2 {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 15px 0;
+
+      @include media('<large') {
+        font-size: 14px;
+      }
+      
+      &:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+      }
+    }
+
+    & > p {
+      opacity: 0.7;
+    }
+  }
+
+  &-carousel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('<large') {
+      display: block;
+    }
+
+    &-wrapper {
+      width: 50%;
+      position: relative;
+
+      @include media('<large') {
+        width: 100%;
+      }
+    }
+
+    &-component {
+      max-width: 430px;
+    }
+
+    &-arrow {
+      @include media('<large') {
+        display: none;
+      }
+  
+      & button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0 20px;
+        outline: none;
+      }
+    }
+  }
+
+  &-cta {
+    padding-top: 70px;
+    text-align: center;
+
+    @include media('<large') {
+      display: none;
+    }
+
+    &-button {
+      display: inline-block;
+      padding: 30px 40px;
+      font-family: 'Gotham Pro';
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      background-color: #f2d41a;
+
+      &:after {
+        content: '→';
+        margin-left: 25px;
+      }
+    }
+  }
+}

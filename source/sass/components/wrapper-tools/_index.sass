@@ -1,0 +1,373 @@
+
+/*-------------------------------------------
+/* REDESIGN GENERAL STYLES
+/*-------------------------------------------
+
+.hidden-rd
+  max-height: 0px !important
+  padding: 0px !important
+  margin: 0px !important
+  overflow: hidden
+
+.shown-rd
+  max-height: auto
+
+.dnone-rd
+  display: none
+
+.dnone-rd-off
+  display: block
+
+.yellow-button-static
+  position: relative
+  display: inline-block
+  padding: 10px 30px
+  background-color: $lyellow
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-family: 'Gotham Pro'
+  font-weight: 800
+
+
+.yellow-button
+  position: relative
+  display: inline-block
+  vertical-align: top
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  padding: 10px 30px
+  min-width: 200px
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  color: $black
+  font-family: Gotham Pro, sans-serif
+  font-weight: 800
+  letter-spacing: 2px
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    width: 100%
+    background-color: $lyellow
+    z-index: 0
+    transition-property: background, margin-left
+    transition-duration: 100ms, 300ms
+  &::before
+    top: 0
+    bottom: 49%
+    margin-left: -5px
+  &::after
+    bottom: 0
+    top: 49%
+    margin-left: 5px
+  span
+    position: relative
+    z-index: 100
+  &:hover,
+  &:focus
+    &::before,
+    &::after
+      background-color: $dyellow
+      margin-left: 0px
+
+
+
+/*-------------------------------------------
+/* FANCYBOX STYLES
+/*-------------------------------------------
+
+.fancybox-wrap
+  top: 50% !important
+  left: 50% !important
+  transform: translate(-50%, -50%) !important
+
+.fancybox-opened
+  z-index: 8030
+
+.fancybox-title
+  margin: 0px
+
+.fancybox-overlay
+  position: absolute
+  top: 0
+  left: 0
+  overflow: hidden
+  display: none
+  z-index: 8010
+  background: url(../images/popup-pattern.png) left top repeat
+
+.fancybox-overlay-fixed
+  position: fixed
+  bottom: 0
+  right: 0
+
+.fancybox-content
+  display: none
+
+.fancybox-test
+  display: block
+
+.fancybox-skin
+
+
+.fancybox-close
+  position: absolute
+  top: 7%
+  right: 4%
+  width: 39px
+  height: 36px
+  cursor: pointer
+  z-index: 8040
+  background-size: 36px 36px
+  font-size: 40px
+  color: $black
+  background: url('../images/rd_close_cross.svg') no-repeat
+  background-position: center
+
+.feedback-form-modal
+  display: flex
+  flex-flow: column nowrap
+  min-height: 80vh
+  width: 1240px
+  margin: auto
+  padding-left: 136px
+  font-family: 'Gotham Pro'
+  font-weight: 800
+  background-color:  $lyellow
+  color: $black
+  noindex
+    margin-top: 26.5vh
+    .fancybox-title, span
+      font-family: 'Gotham Pro'
+      font-weight: 800
+      text-transform: uppercase
+    .fancybox-title
+      letter-spacing: 0.5px
+      font-size: 58px
+    span
+      letter-spacing: 0px
+      margin-top: 18px
+      display: block
+      font-size: 20px
+
+  form
+    margin-top: 7.4vh
+    display: flex
+    flex-flow: row wrap
+    color: white
+    input
+      border-radius: 0px
+      height: 82px
+    input[type='text']
+      width: 30%
+      color: white
+      background-color: $black
+      border: none
+      padding-left: 31px
+      font-size: 26px
+      &:nth-child(3)
+        margin-left: 1px
+      &::placeholder
+        color: white
+    input[type='submit']
+      position: relative
+      width: 306px
+      background-color: rgba(256, 256, 256, 0)
+      border: 1px solid $black
+      color: $black
+      font-size: 22px
+      text-transform: uppercase
+      letter-spacing: 2px
+      text-align: left
+      padding-left: 46px
+      background: url('../images/rd_arrow_black.svg') no-repeat
+      background-size: 12%
+      background-position: right 16% top 50%
+      transition: 0.5s
+      &:hover
+        background-position: right 10% top 50%
+    > div
+      margin-top: 13px
+      margin-left: 3px
+      input[type='checkbox']
+        height: 17px
+      input[type='checkbox'] + label
+        font-size: 16px
+        font-family: 'Gotham Pro'
+        font-weight: 300
+        color: $black
+
+@media only screen and (max-width: 1440px)
+
+  .fancybox-close
+    top: 5%
+    right: 13%
+    background-size: 20px
+
+  .fancybox-title
+    margin: 0px
+
+  .feedback-form-modal
+    min-height: 90vh
+    width: 84%
+    padding: 0px 10% 0px
+
+    noindex
+      margin-top: 7.5vh
+      .fancybox-title
+        letter-spacing: 0.5px
+        font-size: 43px
+      span
+        letter-spacing: 0px
+        margin-top: 18px
+        display: block
+        font-size: 20px
+
+    form
+      margin-top: 3.4vh
+      flex-flow: column nowrap
+      input[type='text']
+        width: 100%
+        &:nth-child(3)
+          margin-top: 1px
+          margin-left: 0px
+        &::placeholder
+          color: white
+      input[type='submit']
+        width: 100%
+        background-size: 6%
+        &:focus
+          background-position: right 10% top 50%
+      > div
+        input[type='checkbox']
+          height: 17px
+
+//@media only screen and (max-width: 960px)
+
+  .fancybox-close
+    top: 5%
+    right: 7%
+
+  .feedback-form-modal
+    min-height: 90vh
+    width: 98%
+    padding: 0px 3% 0px
+
+    noindex
+      margin-top: 150px
+      .fancybox-title
+        letter-spacing: 0.5px
+        font-size: 6em
+        line-height: 1em
+      span
+        letter-spacing: 0px
+        margin-top: 10px
+        display: block
+        font-size: 0.3em
+    form
+      margin-top: 7vh
+      flex-flow: column nowrap
+      input
+        height: 70px
+      input[type='text']
+        width: 100%
+        &:nth-child(3)
+          margin-top: 1px
+          margin-left: 0px
+        &::placeholder
+          color: white
+      input[type='submit']
+        width: 100%
+        background-size: 6%
+        &:focus
+          background-position: right 10% top 50%
+      > div
+        input[type='checkbox']
+          height: 17px
+        input[type='checkbox'] + label
+          font-size: 20px
+  .fancybox-title
+    margin: 0px
+
+//@media only screen and (max-width: 768px)
+
+  .footer
+    overflow: hidden
+
+  .fancybox-close
+    top: 5%
+    right: 7%
+
+  .feedback-form-modal
+    min-height: 90vh
+    width: 100%
+    padding: 0px 3% 0px
+
+    noindex
+      margin-top: 9.5vh
+      .fancybox-title
+        letter-spacing: 0.5px
+        font-size: 6em
+        line-height: 1em
+      span
+        letter-spacing: 0px
+        margin-top: 10px
+        display: block
+        font-size: 0.3em
+    form
+      margin-top: 3vh
+      flex-flow: column nowrap
+      input
+        height: 70px
+      input[type='text']
+        width: 100%
+        &:nth-child(3)
+          margin-top: 1px
+          margin-left: 0px
+        &::placeholder
+          color: white
+      input[type='submit']
+        width: 100%
+        background-size: 6%
+        &:focus
+          background-position: right 10% top 50%
+      > div
+        input[type='checkbox']
+          height: 17px
+        input[type='checkbox'] + label
+          font-size: 20px
+
+@media only screen and (max-width: 500px)
+  .fancybox-close
+    top: 4%
+    right: 4%
+    background-size: 20px
+
+  .feedback-form-modal
+    min-height: 420px
+    width: 100%
+    noindex
+      margin-top: 6.5vh
+      .fancybox-title
+        font-size: 38px
+
+      span
+        margin-top: 0px
+        font-size: 0.3em
+    form
+      margin-top: 0px
+      input
+        height: 50px
+      input[type='text']
+        font-size: 14px
+      input[type='submit']
+        font-size: 16px
+        padding-left: 31px
+      > div
+        input[type='checkbox']
+          height: 17px
+        input[type='checkbox'] + label
+          font-size: 15px

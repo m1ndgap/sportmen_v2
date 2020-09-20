@@ -1,0 +1,53 @@
+.common-gallery {
+  width: 100%;
+  margin-top: 50px;
+
+  &-section {
+    padding-bottom: 0;
+  }
+
+  &-wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &-item {
+    position: relative;
+    margin-bottom: -4px;
+  }
+
+  &-pic {
+    display: block;
+    
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &-title {
+    padding: 10px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    background-color: #f2d41a;
+    font-family: 'Gotham Pro';
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+
+    @include media('<large') {
+      position: static;
+      background-color: transparent;
+      width: 100%;
+      font-size: 12px;
+      transform: none;
+      text-align: left;
+      padding: 10px;
+    }
+  }
+}

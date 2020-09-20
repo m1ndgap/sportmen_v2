@@ -1,0 +1,167 @@
+.main-news {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+
+  &-lg {
+    display: flex;
+
+    @include media('<large') {
+      display: none;
+    }
+  }
+
+  &-sm {
+    display: none;
+
+    @include media('<large') {
+      display: flex;
+      flex-direction: column;
+      margin: 40px 0 -10px;
+    }
+
+    &-item {
+      display: flex;
+      margin: 10px 0;
+    }
+
+    &-pic {
+      width: 90px;
+      height: 90px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+    }
+
+    &-info {
+      width: calc(100% - 90px - 20px);
+    }
+
+    &-date {
+      font-family: 'Gotham Pro';
+      font-size: 10px;
+      color: #000;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font-family: 'Gotham Pro';
+      font-size: 14px;
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  &-main {
+    width: 900px;
+    margin-right: 20px;
+
+    &-carousel {
+      &-item {
+        padding: 50px 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &-top {
+        margin-bottom: 300px;
+      }
+  
+      &-date {
+        font-family: 'Gotham Pro';
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+  
+      &-title {
+        font-family: 'Gotham Pro';
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 1.5;
+      }
+
+      &-bottom {
+        & > a {
+          font-family: 'Gotham Pro';
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &-side {
+    width: calc(100% - 900px - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-counter {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &-current {
+        font-family: 'Gotham Pro';
+        font-size: 48px;
+        color: #000;
+        font-weight: bold;
+        width: 58px;
+      }
+
+      &-divider {
+        flex-basis: 100%;
+        height: 1px;
+        background-color: #000;
+      }
+
+      &-total {
+        font-family: 'Gotham Pro';
+        font-size: 16px;
+        color: #000;
+        font-weight: 300;
+        padding-left: 20px;
+        opacity: 0.5;
+      }
+    }
+
+    &-carousel {
+      &-item {
+        width: 100%;
+        height: 320px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &-arrows {
+    margin-top: 20px;
+    text-align: center;
+
+    @include media('<large') {
+      display: none;
+    }
+
+    & button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0 50px;
+      outline: none;
+    }
+  }
+}

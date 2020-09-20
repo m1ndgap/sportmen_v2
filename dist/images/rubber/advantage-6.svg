@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="135px" viewBox="0 0 140 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="advantage-6" transform="translate(1.700000, 19.300000)" stroke-width="5">
+            <g id="Group">
+                <path d="M0.8,113.2 L123.4,113.2" id="Path" stroke="#000000"></path>
+                <path d="M0.8,96.4 C0.8,96.4 28.3,102.5 62.1,102.5 C95.9,102.5 123.4,96.4 123.4,96.4" id="Path" stroke="#000000"></path>
+                <path d="M0.8,71.7 C0.8,71.7 13.1,90.6 62.1,90.6 C111.1,90.6 123.4,71.7 123.4,71.7" id="Path" stroke="#F7CF2D"></path>
+                <path d="M69.8,75.4 L54.4,75.4 C42.2,75.4 32.2,65.5 32.2,53.2 L32.2,38.9 C32.2,30.5 39,23.7 47.4,23.7 L76.8,23.7 C85.2,23.7 92,30.5 92,38.9 L92,53.2 C92,65.5 82.1,75.4 69.8,75.4 Z" id="Path" stroke="#F7CF2D"></path>
+                <path d="M42.7,22.9 L42.7,9.4 C42.7,4.6 47,0.7 52.2,0.7 L71.9,0.7 C77.2,0.7 81.4,4.6 81.4,9.4 L81.4,22.9" id="Path" stroke="#F7CF2D"></path>
+            </g>
+            <path d="M49.5,37 L49.5,62.1" id="Path" stroke="#F7CF2D"></path>
+            <path d="M49.5,53.3 L59.7,37" id="Path" stroke="#F7CF2D"></path>
+            <path d="M54.6,45.2 L60.7,62.1" id="Path" stroke="#F7CF2D"></path>
+            <path d="M69.8,62.1 L69.8,37" id="Path" stroke="#F7CF2D"></path>
+            <path d="M69.8,37 L79.8,37" id="Path" stroke="#F7CF2D"></path>
+        </g>
+    </g>
+</svg>

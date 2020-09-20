@@ -1,0 +1,229 @@
+.product-card {
+  width: 310px;
+  padding: 10px;
+  margin: 10px 0;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: #fff;
+  transition: 0.1s linear box-shadow;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media('<small') {
+    width: calc(100% / 2 - 10px);
+    padding: 0;
+  }
+
+  @include media('>=small', '<large') {
+    width: calc(100% / 3);
+  }
+
+  &:hover {
+    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.17);
+    z-index: 1;
+  }
+
+  &-badge {
+    font-family: 'Gotham Pro';
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include media('<small') {
+      font-size: 12px;
+    }
+
+    &-green {
+      padding: 4px 8px;
+      background-color: #d3ff7f;
+
+      @include media('<small') {
+        display: block;
+      }
+    }
+  }
+
+  &-title {
+    font-family: 'Gotham Pro';
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto;
+
+    @include media('<small') {
+      font-size: 14px;
+    }
+  }
+
+  &-pic {
+    height: 190px;
+    width: 290px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media('<large') {
+      width: 100%;
+      height: auto;
+    }
+
+    & > img {
+      width: 100%;
+      max-height: 190px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: flex-end;
+
+    @include media('<large') {
+      display: none;
+    }
+
+    &-right {
+      width: 50%;
+    }
+
+    &-left {
+      width: 50%;
+    }
+
+    &-small {
+      display: none;
+
+      @include media('<large') {
+        display: block;
+      }
+
+      &-old {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-new {
+        text-align: center;
+      }
+    }
+  }
+
+  &-deal {
+    display: inline-block;
+    font-family: 'Gotham Pro';
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #ff003c;
+    padding: 0 5px;
+    margin-bottom: 10px;
+
+    @include media('<small') {
+      font-size: 14px;
+    }
+  }
+
+  &-price-old {
+    font-family: 'Gotham Pro';
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    line-height: 20px;
+    text-decoration: line-through;
+
+    @include media('<small') {
+      font-size: 16px;
+    }
+  }
+
+  &-price-new {
+    font-family: 'Gotham Pro';
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    line-height: 22px;
+
+    @include media('<small') {
+      font-size: 22px;
+      margin: 6px 0;
+    }
+
+    @include media('>=small', '<large') {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+  }
+
+  &-id {
+    font-family: 'Gotham Pro';
+    font-size: 14px;
+    font-weight: 600;
+    color: #808080;
+    text-align: right;
+
+    @include media('<large') {
+      font-weight: 300;
+      text-align: center;
+      margin: 10px 0 20px;
+    }
+
+    &-small {
+      display: none;
+
+      @include media('<small') {
+        font-size: 12px;
+      }
+
+      @include media('<large') {
+        display: block;
+      }
+    }
+  }
+
+  &-buy {
+    text-align: right;
+    margin-top: 10px;
+
+    &-button {
+      display: inline-block;
+      border: none;
+      text-decoration: none;
+      background-color: #f7cf2d;
+      color: #000;
+      font-family: 'Gotham Pro';
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      padding: 10px 20px;
+
+      @include media('<large') {
+        width: 100%;
+        padding: 17px 0;
+      }
+    }
+  }
+
+  &-footer {
+    background-color: #131313;
+    color: #fff;
+    font-family: 'Gotham Pro';
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    padding: 3px 0 2px;
+
+    @include media('<large') {
+      margin-top: 0;
+      font-size: 12px;
+    }
+  }
+}
