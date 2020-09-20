@@ -269,6 +269,17 @@
     @media (max-width: 767px) {
       .common-section-title {
         font-size: 24px; } }
+  .common-section-text {
+    font-size: 18px;
+    font-family: "Gotham Pro", sans-serif; }
+    .common-section-text .highlight {
+      font-weight: bold; }
+    .common-section-text img {
+      max-width: 100%;
+      margin-top: 30px; }
+    .common-section-text img + img {
+      margin-top: 15px;
+      margin-bottom: 30px; }
 
 .common-gallery {
   width: 100%;
@@ -4759,8 +4770,10 @@ li + .cart_page_menu_button::before {
           .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a svg, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a svg, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a svg {
             width: 150px;
             height: 150px; }
-          .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st1, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st0, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st2, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st3, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st1, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st0, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st2, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st3, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st1, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st0, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st2, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st3 {
-            stroke: #d9be1a; }
+          .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg {
+            fill: #d9be1a; }
+            .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st1, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st0, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st2, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-2 .main-submenu2 a:hover svg .st3, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st1, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st0, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st2, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-3 .main-submenu2 a:hover svg .st3, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st1, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st0, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st2, .nav .header-nav-container .header-main-menu .header-main-menu-list .with-submenu .main-menu-sub-4 .main-submenu2 a:hover svg .st3 {
+              stroke: #d9be1a; }
       .nav .header-nav-container .header-main-menu .header-main-menu-list .header-main-menu-list__item + li {
         margin-left: 27px; }
         .nav .header-nav-container .header-main-menu .header-main-menu-list .header-main-menu-list__item + li a {

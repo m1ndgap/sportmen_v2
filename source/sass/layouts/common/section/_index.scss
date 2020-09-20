@@ -10,4 +10,20 @@
   &-title {
     @include second-level-title(#000);
   }
+  &-text {
+    font-size: 18px;
+    font-family: "Gotham Pro", sans-serif;
+    .highlight {
+      font-weight: bold;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+    img + img {
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
 }
+
